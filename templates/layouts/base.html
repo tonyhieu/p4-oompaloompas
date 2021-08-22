@@ -20,24 +20,32 @@
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <a class="navbar-brand">The Oompa Loompas</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="navbar-nav">
+
+
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item">
                     <a class="nav-link" href={{ url_for('index') }}>Home</a>
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Individual Labs
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Linda Long</a>
-                        <a class="dropdown-item" href="#">Sanvi Pal</a>
-                        <a class="dropdown-item" href="#">Alice Tang</a>
-                        <a class="dropdown-item" href="#">Anthony Vo</a>
-                        <a class="dropdown-item" href="#">Ellen Xu</a>
-                    </div>
-                </div>
-            </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Individual Labs <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Linda Long</a></li>
+                        <li><a href="#">Sanvi Pal</a></li>
+                        <li><a href="#">Alice Tang</a></li>
+                        <li><a href="#">Anthony Vo</a></li>
+                        <li><a href="#">Ellen Xu</a></li>
+                    </ul>
+                </li>
+
+            </ul> <!-- end navbar ul -->
+
         </nav>
 
         {% block content %}{% endblock %}
