@@ -1,0 +1,23 @@
+:root{
+    --color1: whitesmoke;
+    --color2: grey;
+}
+
+html, body{
+    margin: 0;
+    height: 100%;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+.content {
+    margin: 1em;
+}
+
+h1 {
+    font-size: 5em;
+}
