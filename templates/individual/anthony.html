@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="container-fluid content">
+    <h1>Anthony Vo Individual Labs</h1>
+    <p>Hi! My name is Anthony Vo. Have a look at some of the things I've worked on!</p>
+    <br />
+
+    <div class="row">
+        <button type="button" class="btn btn-outline-dark offset-sm-1 col-sm-3" onclick="playAdventure()">Adventure Game</button>
+        <button type="button" class="btn btn-outline-dark offset-sm-4 col-sm-3" onclick="playHangman()">Hangman Game</button>
+    </div>
+
+    <script src="/static/js/anthonyJs.js"></script>
+
+</div>
+{% endblock %}
