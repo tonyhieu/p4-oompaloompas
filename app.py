@@ -8,6 +8,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/changelog")
+def changelog():
+    return render_template("changelog.html")
+
+
 @app.route("/anthony")
 def anthony():
     return render_template("individual/anthony.html")
