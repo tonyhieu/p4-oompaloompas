@@ -1,6 +1,8 @@
 :root{
     --color1: whitesmoke;
     --color2: grey;
+    --bgColor: #c7fcfa;
+    --headerColor: #fbd6b4;
 }
 
 html, body{
@@ -10,7 +12,7 @@ html, body{
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -o-animation: fadein 2s; /* Opera */
-    background-color: var(--color2);
+    background-color: var(--bgColor);
     color: var(--color1);
 }
 
@@ -20,4 +22,9 @@ html, body{
 
 h1 {
     font-size: 5em;
+}
+
+.navbar-custom {
+    background-color: var(--headerColor);
+    color: black;
 }
