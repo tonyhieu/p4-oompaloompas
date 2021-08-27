@@ -1,6 +1,29 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 
-<h1>Welcome to our website!</h1>
+<h1 style="text-align: center;" id="typewriter"></h1>
+
+
+
+<script>
+var i = 0;
+var speed = 50;
+
+function reset() {
+    i = 0;
+}
+
+function typeWriter(id, text) {
+  if (i < text.length) {
+    document.getElementById(id).innerHTML += text.charAt(i);
+    i++;
+    setTimeout(function() {typeWriter(id, text)}, speed);
+  }
+}
+
+window.onload = function() {
+    typeWriter("typewriter", "Welcome to our website!");
+} 
+</script>
 
 {% endblock %}

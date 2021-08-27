@@ -7,6 +7,7 @@ app = Flask("app")
 def index():
     return render_template("index.html")
 
+
 @app.route("/greet", methods=['GET', 'POST'])
 def greet():
     if request.form:
@@ -29,6 +30,7 @@ def anthony():
 @app.route("/ellen")
 def ellen():
     return render_template("individual/ellen.html")
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)

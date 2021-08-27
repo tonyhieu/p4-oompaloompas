@@ -26,5 +26,10 @@ h1 {
 
 .navbar-custom {
     background-color: var(--headerColor);
+}
+
+.navbar a,
+.content {
     color: black;
+    font-family: "Arial Narrow";
 }
