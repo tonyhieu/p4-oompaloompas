@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+#our gallery website
+
 
 app = Flask("app")
 # I was here
