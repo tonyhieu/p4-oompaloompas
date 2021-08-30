@@ -2,7 +2,12 @@
 {% block content %}
 
 <h1>Alice Tang Individual Labs</h1>
-<p>Hello, Im Alice! Here is some of my work! <3 </p>
-<!--    <br />-->
+<p>Hello {{name}}, I'm Alice! Here is some of my work! <3 </p>
+
+<form action="/alice" id="alice" method="POST" >
+    <label for="name">Enter Your Name</label>
+    <input name="name" id="name">
+    <input type="submit" value="Go!">
+</form>
 
 {% endblock %}

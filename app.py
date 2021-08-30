@@ -40,7 +40,13 @@ def ellen():
 
 @app.route("/alice")
 def alice():
-    return render_template("individual/alice.html")
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("individual/alice.html", name=name)
+    # starting and empty input default
+    return render_template("individual/alice.html", name="World")
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)
