@@ -38,7 +38,7 @@ def ellen():
     # starting and empty input default
     return render_template("individual/ellen.html", name="World")
 
-@app.route("/alice")
+@app.route("/alice", methods=['GET', 'POST'])
 def alice():
     if request.form:
         name = request.form.get("name")
