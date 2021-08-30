@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-#our gallery website
+# our gallery website
 
 
 app = Flask("app")
@@ -34,6 +34,9 @@ def anthony():
 def ellen():
     return render_template("individual/ellen.html")
 
+@app.route("/alice")
+def alice():
+    return render_template("individual/alice.html")
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)
