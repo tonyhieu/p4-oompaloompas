@@ -1,8 +1,9 @@
 :root{
     --color1: whitesmoke;
     --color2: grey;
-    --bgColor: #c7fcfa;
-    --headerColor: #fbd6b4;
+    --bgColor: #2c2f23;
+    --headerColor: #2d2011;
+    --textColor: #b8ada9;
 }
 
 html, body{
@@ -13,7 +14,7 @@ html, body{
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -o-animation: fadein 2s; /* Opera */
     background-color: var(--bgColor);
-    color: var(--color1);
+    color: var(--textColor);
 }
 
 .content {
@@ -29,7 +30,14 @@ h1 {
 }
 
 .navbar a,
+.navbar a:hover,
+.navbar a:active,
 .content {
-    color: black;
-    font-family: "Arial Narrow";
+    color: var(--textColor);
+    font-family: "Palatino, URW Palladio L, serif";
+}
+
+.baseNav {
+    background-color: var(--bgColor); 
+    color: var(--textColor);;
 }
