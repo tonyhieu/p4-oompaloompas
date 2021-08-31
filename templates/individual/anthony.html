@@ -10,6 +10,17 @@
     <button type="button" class="btn btn-outline-light offset-sm-4 col-sm-3" onclick="playHangman()">Hangman Game</button>
 </div>
 
+<br />
+<br />
+
+<form id="form" method="post">
+    <input type="text" name="search" required>
+    <input type="submit" value="Search for a term!">
+</form>
+
+<p>{{summary}}</p>
+
+
 <script src="/static/js/anthonyJs.js"></script>
 
 {% endblock %}

@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import wikipedia
 # our gallery website
 
 
@@ -19,13 +20,19 @@ def greet():
     # starting and empty input default
     return render_template("greet.html", name="World")
 
-@app.route("/changelog")
-def changelog():
+
+@app.route("/journal")
+def journal():
     return render_template("changelog.html")
 
 
-@app.route("/anthony")
+@app.route("/anthony", methods=['GET','POST'])
 def anthony():
+    if request.method=='POST':
+        form = request.form
+        search = (form['search'])
+        searchsummary = wikipedia.summary(search, auto_suggest=False)
+        return render_template("individual/anthony.html", summary=searchsummary)
     return render_template("individual/anthony.html")
 
 
@@ -37,6 +44,7 @@ def ellen():
             return render_template("individual/ellen.html", name=name)
     # starting and empty input default
     return render_template("individual/ellen.html", name="World")
+
 
 @app.route("/alice", methods=['GET', 'POST'])
 def alice():

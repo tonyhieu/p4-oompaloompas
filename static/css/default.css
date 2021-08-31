@@ -4,6 +4,7 @@
     --bgColor: #2c2f23;
     --headerColor: #2d2011;
     --textColor: #b8ada9;
+    --galleryColor: #222121;
 }
 
 html, body{
@@ -40,4 +41,10 @@ h1 {
 .baseNav {
     background-color: var(--bgColor); 
     color: var(--textColor);;
+}
+
+.gallery {
+    background-color: var(--galleryColor);
+    transform: translateY(5em);
+    height: 40em;
 }
