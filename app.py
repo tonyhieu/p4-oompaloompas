@@ -31,7 +31,10 @@ def anthony():
     if request.method=='POST':
         form = request.form
         search = (form['search'])
-        searchsummary = wikipedia.summary(search)
+        try:
+            searchsummary = wikipedia.summary(search)
+        except:
+            searchsummary = "Page not found"
         return render_template("individual/anthony.html", summary=searchsummary)
     return render_template("individual/anthony.html")
 
