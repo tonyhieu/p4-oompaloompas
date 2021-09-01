@@ -45,6 +45,6 @@ h1 {
 
 .gallery {
     background-color: var(--galleryColor);
-    transform: translateY(5em);
-    height: 40em;
+    transform: translateY(10vh);
+    height: 50vh;
 }
