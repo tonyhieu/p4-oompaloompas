@@ -3,7 +3,8 @@
     --color2: grey;
     --bgColor: #2c2f23;
     --headerColor: #2d2011;
-    --textColor: #b8ada9;
+    --navTextColor: #b8ada9;
+    --contentTextColor: #b8ada9;
     --galleryColor: #222121;
 }
 
@@ -32,9 +33,13 @@ h1 {
 
 .navbar a,
 .navbar a:hover,
-.navbar a:active,
+.navbar a:active {
+    color: var(--navTextColor);
+    font-family: "Palatino, URW Palladio L, serif";
+}
+
 .content {
-    color: var(--textColor);
+    color: var(--contentTextColor);
     font-family: "Palatino, URW Palladio L, serif";
 }
 
