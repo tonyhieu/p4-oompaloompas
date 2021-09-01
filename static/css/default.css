@@ -1,11 +1,11 @@
 :root{
     --color1: whitesmoke;
     --color2: grey;
-    --bgColor: #2c2f23;
-    --headerColor: #2d2011;
-    --navTextColor: #b8ada9;
-    --contentTextColor: #b8ada9;
-    --galleryColor: #222121;
+    --bgColor: #e0e1dd;
+    --headerColor: #1b263b;
+    --navTextColor: #e0e1dd;
+    --contentTextColor: #0b1d2a;
+    --galleryColor: #778da9;
 }
 
 html, body{
