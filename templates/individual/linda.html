@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<h1>Linda Liu Individual Labs</h1>
+<p>Hello {{name}}, I am Linda Liu!</p>
+
+<form action="/linda" id="linda" method="POST" >
+    <label for="name">Enter Your Name</label>
+    <input name="name" id="name">
+    <input type="submit" value="Go!">
+</form>
+
+{% endblock %}

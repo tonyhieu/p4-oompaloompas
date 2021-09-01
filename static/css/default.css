@@ -1,10 +1,11 @@
 :root{
     --color1: whitesmoke;
     --color2: grey;
-    --bgColor: #2c2f23;
-    --headerColor: #2d2011;
-    --textColor: #b8ada9;
-    --galleryColor: #222121;
+    --bgColor: #e0e1dd;
+    --headerColor: #1b263b;
+    --navTextColor: #e0e1dd;
+    --contentTextColor: #0b1d2a;
+    --galleryColor: #778da9;
 }
 
 html, body{
@@ -32,9 +33,13 @@ h1 {
 
 .navbar a,
 .navbar a:hover,
-.navbar a:active,
+.navbar a:active {
+    color: var(--navTextColor);
+    font-family: "Palatino, URW Palladio L, serif";
+}
+
 .content {
-    color: var(--textColor);
+    color: var(--contentTextColor);
     font-family: "Palatino, URW Palladio L, serif";
 }
 

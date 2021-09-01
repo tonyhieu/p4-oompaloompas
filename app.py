@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import wikipedia
-# our gallery website
 
 
 app = Flask("app")
@@ -52,6 +51,14 @@ def alice():
     # starting and empty input default
     return render_template("individual/alice.html", name="World")
 
+@app.route('/linda', methods=['GET', 'POST'])
+def linda():
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("individual/linda.html", name=name)
+    # starting and empty input default
+    return render_template("individual/linda.html", name="World")
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)
