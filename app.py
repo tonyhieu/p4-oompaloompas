@@ -61,7 +61,7 @@ def linda():
     return render_template("individual/linda.html", name="World")
 
 @app.route('/sanvi', methods=['GET', 'POST'])
-def Sanvi():
+def sanvi():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
