@@ -14,6 +14,7 @@ def index():
 def about():
     return render_template("about.html")
 
+
 @app.route("/journal")
 def journal():
     return render_template("changelog.html")
@@ -51,6 +52,7 @@ def alice():
     # starting and empty input default
     return render_template("individual/alice.html", name="World")
 
+
 @app.route('/linda', methods=['GET', 'POST'])
 def linda():
     if request.form:
@@ -60,6 +62,7 @@ def linda():
     # starting and empty input default
     return render_template("individual/linda.html", name="World")
 
+
 @app.route('/sanvi', methods=['GET', 'POST'])
 def sanvi():
     if request.form:
@@ -68,6 +71,7 @@ def sanvi():
             return render_template("individual/sanvi.html", name=name)
     # starting and empty input default
     return render_template("individual/sanvi.html", name="World")
+
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)
