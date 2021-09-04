@@ -13,7 +13,7 @@
 - [Grading](https://github.com/tonyhieu/p4-oompaloompas/blob/master/README.md#)
 
 ## Grading
-PBL Points: 4/4
+### PBL Points: 4/4
 
 | Requirement | Evidence |
 | - | - |
@@ -25,11 +25,21 @@ PBL Points: 4/4
 | Developers. Integration of Greet like functionality into a mini-lab page | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/19) |
 | Developers. Integration of Video Journal 0 into a mini-lab page | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/16) |
 
-Individual
+### Individual
+
+[Alice and Ellen's Journal](https://docs.google.com/document/d/1IMomoeHpL4793btw-B4mt3yB9S1Kny-oxPzsLeIh2i8/edit?usp=sharing)
+[Anthony and Sanvi's Journal]()
+[Linda's Journal](https://docs.google.com/document/d/1d0F_Sr5oOJlMEnkFgruAcjrxLBLO19QT5fNWwc1e6u4/edit?usp=sharing)
+
+[Evidence of each person committing](https://github.com/tonyhieu/p4-oompaloompas/graphs/contributors) and finishing [scrum board tasks](https://github.com/tonyhieu/p4-oompaloompas/projects/1)
 
 | Name | Score | Evidence |
 | - | - | - |
-| Linda | 4/4 | Placeholder | 
+| Linda | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/linda.html), plans to use laptop at home and school | 
+| Sanvi | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/sanvi.html), plans to use laptop at home and school | 
+| Alice | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/alice.html), plans to use laptop at home and school | 
+| Anthony | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/anthony.html), plans to use laptop at home and school | 
+| Ellen | 4/4 | [Individual page](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/ellen.html), plans to use laptop at home and school | 
 
 ## Ideation
 We came up with our idea by putting any idea we had onto our scrum board. After a while, we figured out that we wanted to do a photo gallery to host a bunch of pictures that we had. Our home page shows our design come to life; we have a distinct color scheme and a rectangle in the middle that will showcase our pictures.
