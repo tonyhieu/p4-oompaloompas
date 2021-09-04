@@ -10,7 +10,8 @@
 | Ellen Xu | [@LindaLiu1202](https://github.com/xu-ellen) |
 
 ## Table of Contents
-- [Grading](https://github.com/tonyhieu/p4-oompaloompas/blob/master/README.md#)
+- [Grading](https://github.com/tonyhieu/p4-oompaloompas/blob/master/README.md#grading)
+- [Ideation](https://github.com/tonyhieu/p4-oompaloompas/blob/master/README.md#ideation)
 
 ## Grading
 ### PBL Points: 4/4
@@ -28,7 +29,9 @@
 ### Individual
 
 [Alice and Ellen's Journal](https://docs.google.com/document/d/1IMomoeHpL4793btw-B4mt3yB9S1Kny-oxPzsLeIh2i8/edit?usp=sharing)
+<br />
 [Anthony and Sanvi's Journal]()
+<br />
 [Linda's Journal](https://docs.google.com/document/d/1d0F_Sr5oOJlMEnkFgruAcjrxLBLO19QT5fNWwc1e6u4/edit?usp=sharing)
 
 [Evidence of each person committing](https://github.com/tonyhieu/p4-oompaloompas/graphs/contributors) and finishing [scrum board tasks](https://github.com/tonyhieu/p4-oompaloompas/projects/1)
