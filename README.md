@@ -7,7 +7,7 @@
 | Sanvi Pal | [@sanvi1855544](https://github.com/sanvi1855544) |
 | Alice Tang | [@tangalice](https://github.com/tangalice) |
 | Anthony Vo | [@tonyhieu](https://github.com/tonyhieu) |
-| Ellen Xu | [@LindaLiu1202](https://github.com/xu-ellen) |
+| Ellen Xu | [@xu-ellen](https://github.com/xu-ellen) |
 
 ## Table of Contents
 - [Grading](https://github.com/tonyhieu/p4-oompaloompas/blob/master/README.md#grading)
