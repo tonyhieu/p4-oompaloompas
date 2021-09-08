@@ -40,12 +40,16 @@ def anthonyBinary():
 
 @app.route("/ellen", methods=['GET', 'POST'])
 def ellen():
-    if request.form:
+    if request.form.get("name"):
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
             return render_template("individual/ellen.html", name=name)
+    if request.form.get("note"):
+        note = request.form.get("note")
+        if len(note) != 0:  # input field has content
+            return render_template("individual/ellen.html", note=note)
     # starting and empty input default
-    return render_template("individual/ellen.html", name="World")
+    return render_template("individual/ellen.html", name="World", note="Text")
 
 
 @app.route("/alice", methods=['GET', 'POST'])

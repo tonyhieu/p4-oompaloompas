@@ -14,7 +14,12 @@
 - [Ideation](https://github.com/tonyhieu/p4-oompaloompas/blob/master/README.md#ideation)
 
 ## Grading
-### PBL Points: 4/4
+
+### September 10
+
+### September 3
+
+#### PBL Points: 4/4
 
 | Requirement | Evidence |
 | - | - |
@@ -26,7 +31,7 @@
 | Developers. Integration of Greet like functionality into a mini-lab page | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/19) |
 | Developers. Integration of Video Journal 0 into a mini-lab page | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/16) |
 
-### Individual
+#### Individual
 
 [Alice and Ellen's Journal](https://docs.google.com/document/d/1IMomoeHpL4793btw-B4mt3yB9S1Kny-oxPzsLeIh2i8/edit?usp=sharing)
 <br />
