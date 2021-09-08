@@ -78,6 +78,9 @@ function toggleSwitch (id) {
     } else {
         element.innerHTML = "1";
     }
+    element.classList.toggle("buttonOn");
+    element.classList.toggle("buttonOff");
+
     calculateRow(id.charAt(0));
 }
 
@@ -133,9 +136,35 @@ function reset () {
         calculateRow('r');
         calculateRow('b');
         calculateRow('g');
+
+        document.getElementById('r' + i).classList.add("buttonOff");
+        document.getElementById('g' + i).classList.add("buttonOff");
+        document.getElementById('b' + i).classList.add("buttonOff");
+
+        document.getElementById('r' + i).classList.remove("buttonOn");
+        document.getElementById('g' + i).classList.remove("buttonOn");
+        document.getElementById('b' + i).classList.remove("buttonOn");
     }
 }
 
+window.onload = reset();
+
 </script>
-<!-- need 8 bits to make 256-->
+
+<style>
+
+.buttonOff {
+    background-color: white;
+    color: black;
+    font-style: normal;
+}
+
+.buttonOn {
+    background-color: black;
+    color: white;
+    font-style: italic;
+}
+
+</style>
+
 {% endblock %}
