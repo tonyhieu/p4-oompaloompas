@@ -16,7 +16,7 @@
     <button class="col-sm-1" id="r7" onclick="toggleSwitch('r7')">0</button>
     <button class="col-sm-1" id="r8" onclick="toggleSwitch('r8')">0</button>
 
-    <div class="col-sm-3">
+    <div class="offset-sm-1 col-sm-2">
         <p id="r">Decimal value: 0</p>
     </div>
 </div>
@@ -33,7 +33,7 @@
     <button class="col-sm-1" id="g7" onclick="toggleSwitch('g7')">0</button>
     <button class="col-sm-1" id="g8" onclick="toggleSwitch('g8')">0</button>
 
-    <div class="col-sm-3">
+    <div class="offset-sm-1 col-sm-2">
         <p id="g">Decimal value: 0</p>
     </div>
 </div>
@@ -50,12 +50,18 @@
     <button class="col-sm-1" id="b7" onclick="toggleSwitch('b7')">0</button>
     <button class="col-sm-1" id="b8" onclick="toggleSwitch('b8')">0</button>
 
-    <div class="col-sm-3">
+    <div class="offset-sm-1 col-sm-2">
         <p id="b">Decimal value: 0</p>
     </div>
 </div>
 
+<div class="offset-sm-1 col-sm-10" id="color" style="background-color: #000000; height: 20vh;">
+</div>
+<p style="text-align: center;" id="code">Hexcode: #000000</p>
+
 <script>
+
+var red, green, blue = 0;
 
 function toggleSwitch (id) {
     const element = document.getElementById(id);
@@ -71,12 +77,31 @@ function calculateRow (color) {
     let sum = 0;
     for (var i = 1; i <= 8; i++) {
         let element = document.getElementById(color + i);
-        alert(Integer.valueOf(element.innerHTML));
-        alert(Math.pow(2, 8 - i) * Integer.valueOf(element.innerHTML));
-        sum += Math.pow(2, 8 - i) * Integer.parseInt(element.innerHTML);
+        sum += Math.pow(2, 8 - i) * parseInt(element.innerHTML);
     }
-    alert(sum);
     document.getElementById(color).innerHTML = "Decimal value: " + sum;
+    switch (color) {
+        case 'r':
+            red = sum;
+            break;
+        case 'g':
+            green = sum;
+            break;
+        case 'b':
+            blue = sum;
+            break;
+        default:
+            break;
+    }
+    setColorCode();
+}
+
+function setColorCode () {
+    let code = "#";
+    alert(red.toString(16));
+    code = code + red.toString(16) + green.toString(16) + blue.toString(16);
+    document.getElementById("color").style.backgroundColor = code;
+    document.getElementById("code").innerHTML = "Hexcode: " + code;
 }
 
 </script>
