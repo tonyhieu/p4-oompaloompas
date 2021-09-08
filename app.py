@@ -30,7 +30,12 @@ def anthony():
         except:
             searchsummary = "Page not found"
         return render_template("individual/anthony.html", summary=searchsummary)
-    return render_template("individual/anthony.html")
+    return render_template("individual/anthony/anthony.html")
+
+
+@app.route("/anthonyBinary")
+def anthonyBinary():
+    return render_template("individual/anthony/binary.html")
 
 
 @app.route("/ellen", methods=['GET', 'POST'])
