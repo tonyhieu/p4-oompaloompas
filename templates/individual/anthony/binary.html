@@ -61,6 +61,10 @@
 </div>
 <p style="text-align: center;" id="code">Hexcode: #000000</p>
 
+<br />
+<button style="justify-content: center;" onclick="reset()">Reset</button>
+
+
 <script>
 
 var red = 0;
@@ -118,6 +122,18 @@ function setColorCode () {
     let code = "#" + r + g + b;
     document.getElementById("color").style.backgroundColor = code;
     document.getElementById("code").innerHTML = "Hexcode: " + code;
+}
+
+function reset () {
+    for (var i = 1; i <= 8; i++) {
+        document.getElementById('r' + i).innerHTML = "0";
+        document.getElementById('g' + i).innerHTML = "0";
+        document.getElementById('b' + i).innerHTML = "0";
+
+        calculateRow('r');
+        calculateRow('b');
+        calculateRow('g');
+    }
 }
 
 </script>
