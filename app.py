@@ -29,7 +29,7 @@ def anthony():
             searchsummary = wikipedia.summary(search)
         except:
             searchsummary = "Page not found"
-        return render_template("individual/anthony.html", summary=searchsummary)
+        return render_template("individual/anthony/anthony.html", summary=searchsummary)
     return render_template("individual/anthony/anthony.html")
 
 
