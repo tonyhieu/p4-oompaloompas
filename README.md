@@ -14,6 +14,11 @@
 - [Ideation](https://github.com/tonyhieu/p4-oompaloompas/blob/master/README.md#ideation)
 
 ## Grading
+
+### September 10
+
+### September 3
+
 ### PBL Points: 4/4
 
 | Requirement | Evidence |
