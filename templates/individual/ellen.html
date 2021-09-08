@@ -1,6 +1,23 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 
+<style>
+    .stickyNote{
+        text-decoration:none;
+        color:#000;
+        background:#ffc;
+        display:block;
+        height:10em;
+        width:10em;
+        padding:1em;
+
+    }
+
+    .stickyNote{
+        margin:1em;
+    }
+</style>
+
 <h1>Ellen Xu Individual Labs</h1>
 <p>Hello {{name}}, I'm Ellen! Check out some of my mini projects below :) </p>
 
@@ -9,5 +26,19 @@
     <input name="name" id="name">
     <input type="submit" value="Go!">
 </form>
+
+<br>
+<h2>Sticky Notes</h2>
+
+<form action="/ellen" id="notes" method="POST" >
+    <label for="note">Enter Text</label>
+    <input name="note" id="note">
+    <input type="submit" value="Post It!">
+</form>
+
+<div class="stickyNote">
+    <h2>Sticky #1</h2>
+    <p>{{note}}</p>
+</div>
 
 {% endblock %}
