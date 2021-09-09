@@ -38,7 +38,9 @@ h1 {
     font-family: "Palatino, URW Palladio L, serif";
 }
 
-.content {
+.content,
+.content a,
+.content a:hover {
     color: var(--contentTextColor);
     font-family: "Palatino, URW Palladio L, serif";
 }
