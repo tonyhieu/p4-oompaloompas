@@ -14,6 +14,9 @@ def index():
 def about():
     return render_template("about.html")
 
+@app.route("/minilab")
+def minilab():
+    return render_template("minilab/minilab.html")
 
 @app.route("/journal")
 def journal():
