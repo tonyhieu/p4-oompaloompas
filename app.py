@@ -18,10 +18,13 @@ def about():
 def minilab():
     return render_template("minilab/minilab.html")
 
+@app.route("/binary")
+def binary():
+    return render_template("minilab/binary.html")
+
 @app.route("/journal")
 def journal():
     return render_template("changelog.html")
-
 
 @app.route("/anthony", methods=['GET','POST'])
 def anthony():
