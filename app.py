@@ -9,7 +9,6 @@ app = Flask("app")
 def index():
     return render_template("index.html")
 
-
 @app.route("/about")
 def about():
     return render_template("about.html")
@@ -18,9 +17,14 @@ def about():
 def minilab():
     return render_template("minilab/minilab.html")
 
-@app.route("/binary")
+@app.route("/binary", methods=['GET','POST'])
 def binary():
-    return render_template("minilab/binary.html")
+    if request.form:
+        bits = request.form.get("bits")
+        if len(bits) != 0:  # input field has content
+            return render_template("minilab/binary.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("minilab/binary.html", bits=8)
 
 @app.route("/journal")
 def journal():
@@ -37,7 +41,6 @@ def anthony():
             searchsummary = "Page not found"
         return render_template("individual/anthony/anthony.html", summary=searchsummary)
     return render_template("individual/anthony/anthony.html")
-
 
 @app.route("/anthonyBinary")
 def anthonyBinary():
