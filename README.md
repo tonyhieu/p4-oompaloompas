@@ -2,6 +2,8 @@
 
 ## Contributors
 
+[Scrum Board](https://github.com/tonyhieu/p4-oompaloompas/projects/1) and [Contributers tab](https://github.com/tonyhieu/p4-oompaloompas/graphs/contributors)
+
 [Alice and Ellen's Journal](https://docs.google.com/document/d/1IMomoeHpL4793btw-B4mt3yB9S1Kny-oxPzsLeIh2i8/edit?usp=sharing)
 <br />
 [Anthony and Sanvi's Journal](https://docs.google.com/document/d/1UPQxYudsGg_CQ7wcLBHzOEVOC-G-4lH2g79Qe2gOj3A/edit?usp=sharing)
