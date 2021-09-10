@@ -1,13 +1,20 @@
 # Period 4 Oompa Loompas
 
 ## Contributors
-| Name | Github Profile |
-| - | - |
-| Linda Liu | [@LindaLiu1202](https://github.com/LindaLiu1202) |
-| Sanvi Pal | [@sanvi1855544](https://github.com/sanvi1855544) |
-| Alice Tang | [@tangalice](https://github.com/tangalice) |
-| Anthony Vo | [@tonyhieu](https://github.com/tonyhieu) |
-| Ellen Xu | [@xu-ellen](https://github.com/xu-ellen) |
+
+[Alice and Ellen's Journal](https://docs.google.com/document/d/1IMomoeHpL4793btw-B4mt3yB9S1Kny-oxPzsLeIh2i8/edit?usp=sharing)
+<br />
+[Anthony and Sanvi's Journal](https://docs.google.com/document/d/1UPQxYudsGg_CQ7wcLBHzOEVOC-G-4lH2g79Qe2gOj3A/edit?usp=sharing)
+<br />
+[Linda's Journal](https://docs.google.com/document/d/1d0F_Sr5oOJlMEnkFgruAcjrxLBLO19QT5fNWwc1e6u4/edit?usp=sharing)
+
+| Name | Github Profile | Issues on Scrum Board | Commit History |
+| - | - | - | - |
+| Linda Liu | [@LindaLiu1202](https://github.com/LindaLiu1202) | [Issues](https://github.com/tonyhieu/p4-oompaloompas/issues?q=assignee%3ALindaLiu1202) | [Commits](https://github.com/tonyhieu/p4-oompaloompas/commits?author=LindaLiu1202) |
+| Sanvi Pal | [@sanvi1855544](https://github.com/sanvi1855544) | [Issues](https://github.com/tonyhieu/p4-oompaloompas/issues?q=assignee%3Asanvi1855544) | [Commits](https://github.com/tonyhieu/p4-oompaloompas/commits?author=sanvi1855544) |
+| Alice Tang | [@tangalice](https://github.com/tangalice) | [Issues](https://github.com/tonyhieu/p4-oompaloompas/issues?q=assignee%3Atangalice) | [Commits](https://github.com/tonyhieu/p4-oompaloompas/commits?author=tangalice) |
+| Anthony Vo | [@tonyhieu](https://github.com/tonyhieu) | [Issues](https://github.com/tonyhieu/p4-oompaloompas/issues?q=assignee%3Atonyhieu) | [Commits](https://github.com/tonyhieu/p4-oompaloompas/commits?author=tonyhieu) |
+| Ellen Xu | [@xu-ellen](https://github.com/xu-ellen) | [Issues](https://github.com/tonyhieu/p4-oompaloompas/issues?q=assignee%3Axu-ellen) | [Commits](https://github.com/tonyhieu/p4-oompaloompas/commits?author=xu-ellen) |
 
 ## Table of Contents
 - [Grading](https://github.com/tonyhieu/p4-oompaloompas/blob/master/README.md#grading)
