@@ -26,6 +26,12 @@
 
 ### September 10
 
+Deliverables
+- Binary minilabs ([Group](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/minilab/binary.html) and [Anthony](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/individual/anthony/binary.html))
+- [About Us](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/about.html) page containing Bootstrap
+- [Journal tab](https://github.com/tonyhieu/p4-oompaloompas/blob/master/templates/changelog.html) showcases wireframing and videos
+
+
 ### September 3
 
 #### PBL Points: 4/4
