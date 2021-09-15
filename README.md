@@ -24,6 +24,10 @@
 
 ## Grading
 
+### September 17
+
+Exploratory week; each member added new snippets and experimented with code
+
 ### September 10
 
 Deliverables
