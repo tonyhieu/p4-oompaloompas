@@ -47,6 +47,11 @@ def anthonyBinary():
     return render_template("individual/anthony/binary.html")
 
 
+@app.route("/anthonyShapes")
+def anthonyShapes():
+    return render_template("individual/anthony/shapes.html")
+
+
 @app.route("/ellen", methods=['GET', 'POST'])
 def ellen():
     if request.form.get("name"):
