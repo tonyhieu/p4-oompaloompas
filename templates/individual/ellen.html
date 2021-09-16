@@ -10,7 +10,7 @@
         height:10em;
         width:10em;
         padding:1em;
-
+        box-shadow: 5px 5px 5px gray;
     }
 
     .stickyNote{
@@ -36,9 +36,22 @@
     <input type="submit" value="Post It!">
 </form>
 
-<div class="stickyNote">
-    <h2>Sticky #1</h2>
-    <p>{{note}}</p>
+<input type="button" value="Add" id="add" />
+<input type="button" value="Delete" id="del" />
+
+<div id="board">
+    <div class="stickyNote">
+        <h2>Sticky #1</h2>
+        <p>{{note}}</p>
+    </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    let $board = $('#board');
+    $('#add').click(function () {
+        $board.append('<div class="stickyNote" style="left:20px;top:70px"></div>');
+    });
+</script>
 
 {% endblock %}
