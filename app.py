@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import wikipedia
+from algorithms.image import image_data
 
 
 app = Flask("app")
@@ -16,6 +17,12 @@ def about():
 @app.route("/minilab")
 def minilab():
     return render_template("minilab/minilab.html")
+
+
+@app.route('/rgb', methods=["GET", "POST"])
+def rgb():
+    return render_template('minilab/rgb.html', images=image_data())
+
 
 @app.route("/binary", methods=['GET','POST'])
 def binary():
@@ -42,12 +49,12 @@ def anthony():
         return render_template("individual/anthony/anthony.html", summary=searchsummary)
     return render_template("individual/anthony/anthony.html")
 
-@app.route("/anthonyBinary")
+@app.route("/anthony/binary")
 def anthonyBinary():
     return render_template("individual/anthony/binary.html")
 
 
-@app.route("/anthonyShapes")
+@app.route("/anthony/shapes")
 def anthonyShapes():
     return render_template("individual/anthony/shapes.html")
 

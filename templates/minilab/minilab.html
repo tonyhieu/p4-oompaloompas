@@ -1,6 +1,10 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 
-<a href={{ url_for('binary') }}>Binary</a>
+<ul>
+    <li><a href={{ url_for('binary') }}>Binary</a></li>
+    <li><a href={{ url_for('rgb') }}>RGB</a></li>
+</ul>
+
 
 {% endblock %}
