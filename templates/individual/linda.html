@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 
-<h1>Linda Liu Individual Labs</h1>
+<center><h1>Linda Liu Individual Labs</h1>
 <p>Hello {{name}}, I am Linda Liu!</p>
 
 <form action="/linda" id="linda" method="POST" >
@@ -10,4 +10,28 @@
     <input type="submit" value="Go!">
 </form>
 
+<!DOCTYPE html>
+<html>
+<body>
+</center>
+
+<h1>The onclick Event</h1>
+
+<p>Click the button!</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hiiiii Have a wonderful rest of your day! :)";
+    }
+</script>
+
+</body>
+</html>
+
+
 {% endblock %}
+
