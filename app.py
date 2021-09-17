@@ -34,10 +34,13 @@ def rgb():
 @app.route("/binary", methods=['GET','POST'])
 def binary():
     if request.form:
-        bits = request.form.get("bits")
-        if len(bits) != 0:  # input field has content
-            return render_template("minilab/binary.html", bits=int(bits))
-        # starting and empty input default
+        try:
+            bits = request.form.get("bits")
+            if len(bits) != 0:  # input field has content
+                return render_template("minilab/binary.html", bits=int(bits))
+            # starting and empty input default
+        except:
+            return render_template("minilab/binary.html", bits=8)
     return render_template("minilab/binary.html", bits=8)
 
 @app.route("/journal")
