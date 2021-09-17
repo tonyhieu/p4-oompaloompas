@@ -2,12 +2,51 @@
 {% block content %}
 
 <h1>Alice Tang Individual Labs</h1>
-<p>Hello {{name}}, I'm Alice! Here is some of my work! <3 </p>
+<p>Hello {{name}}, I'm Alice. Here is some of my work. </p>
 
 <form action="/alice" id="alice" method="POST" >
     <label for="name">Enter Your Name</label>
     <input name="name" id="name">
     <input type="submit" value="Go!">
 </form>
+
+<p>________________________________________________________________________________________________________</p>
+<br>
+<p>Random Color Generator:</p>
+
+
+<button onclick="generateRandomColor()">Generate</button>
+
+<script>
+    function generateRandomColor() {
+        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        return randomColor;
+        document.body.style.backgroundColor = generateRandomColor()
+    }
+</script>
+
+
+<style>
+    .Block{
+        text-decoration:none;
+        background:#f9d4ff;
+        display:block;
+        height:10em;
+        width:10em;
+    }
+    .Block{
+        margin:1em;
+    }
+</style>
+
+<div class="Block"> </div>
+
+
+
+
+
+
+
+
 
 {% endblock %}
