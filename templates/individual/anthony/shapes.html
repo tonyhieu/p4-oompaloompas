@@ -15,7 +15,8 @@ function main() {
   const near = 0.1;
   const far = 5;
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.z = 2;
+  // camera.position.set(0,20,0);
+  // camera.lookAt(0,0,0)
 
   const scene = new THREE.Scene();
 
@@ -32,19 +33,27 @@ function main() {
   const boxDepth = 1;
   const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
 
-  function makeInstance(geometry, color, x) {
+  const cubeplane = new THREE.Object3D();
+  scene.add(cubeplane);
+
+  function makeInstance(geometry, color, x, z) {
     const material = new THREE.MeshPhongMaterial({color});
 
     const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    cubeplane.add(cube);
 
-    cube.position.x = x;
+    cube.position.set(x, 0, z);
+
 
     return cube;
   }
 
+
+  makeInstance(geometry, 0x44aa88,  2, 4)
+  makeInstance(geometry, 0x44aa88,  5, 10)
+
   const cubes = [
-    makeInstance(geometry, 0x44aa88,  0),
+    makeInstance(geometry, 0x44aa88,  2, 0),
   ];
 
   function resizeRendererToDisplaySize(renderer) {
@@ -59,7 +68,7 @@ function main() {
     return needResize;
   }
 
-  const moveSpeed = Math.PI * 0.5;
+  const moveSpeed = 5;
 
   function render(time) {
     time *= 0.001;
@@ -76,9 +85,11 @@ function main() {
       cube.rotation.x = rot;
       cube.rotation.y = rot;
 
-      /*cube.position.x = 0 + sin(moveSpeed*time);
-      cube.position.z = 0 + cos(moveSpeed*time);*/
+      // cube.position.x = 0 + sin(moveSpeed*time);
+      // cube.position.z = 0 + cos(moveSpeed*time);
     });
+
+    cubeplane.rotation.y = moveSpeed * time;
 
     renderer.render(scene, camera);
 
