@@ -3,9 +3,31 @@
 
 {% block meta %}
 <script>
+
+    var color = {{ colored|safe }}
+    var gray = {{ grayed|safe }}
+    var imageType = 0; // 0 is color, 1 is gray
+    
+    function toggleColors(array) {
+        for (var i = 1; i <= array.length; i++) {
+            let id = "img" + i;
+            setImg(id, array[i-1]);
+        }
+    }
+
+    function toggle() {
+        if (imageType == 0) {
+            toggleColors(gray);
+            imageType = 1;
+        } else {
+            toggleColors(color);
+            imageType = 0;
+        }
+    }
+
     function setImg(img, base64) {
         // add button and rotate image from original to gray and back (toggle)
-        // document.getElementById(img). = base64;  //change img src to inner html on <p> tag
+        document.getElementById(img).src = base64;  //change img src to inner html on <p> tag
     }
 </script>
 
@@ -15,6 +37,7 @@
 {% block content %}
     <h1 class="text-center">RGB values within an Image</h1>
     <div class="container">
+        <button onclick="toggle()">Toggle Colors!</button>
         <div class="row justify-content-md-center">
             <table class="table">
                 <thead>

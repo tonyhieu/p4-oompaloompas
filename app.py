@@ -21,7 +21,14 @@ def minilab():
 
 @app.route('/rgb', methods=["GET", "POST"])
 def rgb():
-    return render_template('minilab/rgb.html', images=image_data())
+    rawList = image_data()
+    colorList = []
+    grayList = []
+    for img in rawList:
+        colorList.append(img['base64'])
+        grayList.append(img['base64_GRAY'])
+
+    return render_template('minilab/rgb.html', images=rawList, colored=colorList, grayed=grayList)
 
 
 @app.route("/binary", methods=['GET','POST'])
