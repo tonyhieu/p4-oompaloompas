@@ -15,13 +15,13 @@
 <p>Random Color Generator:</p>
 
 
-<button onclick="generateRandomColor()">Generate</button>
 
-<script>
+<input type = "button" onclick = "generateRandomColor()" value = "Generate">
+
+<script type = "text/javascript">
     function generateRandomColor() {
         var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-        return randomColor;
-        document.body.style.backgroundColor = generateRandomColor()
+        document.body.style.backgroundColor = randomColor;
     }
 </script>
 
