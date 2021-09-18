@@ -31,9 +31,6 @@ def rgb():
     return render_template('minilab/rgb.html', images=rawList, colored=colorList, grayed=grayList)
 
 
-@app.route("/animation")
-def animation():
-    return render_template("sanvi/animation.html")
 
 @app.route("/binary", methods=['GET','POST'])
 def binary():

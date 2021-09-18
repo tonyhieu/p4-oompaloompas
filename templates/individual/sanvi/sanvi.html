@@ -4,6 +4,7 @@
 <h1>Sanvi Pal individual labs</h1>
 <p> Hi {{name}}, I'm Sanvi! Check out my minilabs!</p>
 
+    <h1>Minilabs</h1>
 <form action="/sanvi" id="sanvi" method="POST" >
     <label for="name">Enter Your Name</label>
     <input name="name" id="name">
@@ -14,7 +15,7 @@
         <style>
             div {
                 width: 100px;
-                height: 700px;
+                height: 1000px;
                 background-color: #f9d4ff;
                 position: relative;
                 animation-name: example;
@@ -33,7 +34,6 @@
 
 
     <body>
-    <h1>The onclick Event</h1>
     <script>
         function Function1() {
             document.getElementById("demo").innerHTML = "BOO!";
@@ -54,6 +54,43 @@
 
     <p id="demo"></p>
 
+    </body>
+
+    <p>Block Animation</p>
+    <head>
+        <meta charset="utf-8">
+        <title>Box animation</title>
+        <style>
+            .transform_animation {
+                width: 200px;
+                height: 100px;
+                margin-top:30px;
+                background-color: rgb(235, 122, 84);
+                animation-duration: 60s;
+                animation-name: skew_animation;
+            }
+
+            @keyframes skew_animation {
+                0% {
+                    transform: skew(0deg);
+                }
+                50% {
+                    transform: skew(30deg);
+                }
+
+                100% {
+                    background-color: cyan;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    <br>
+    <div style="text-align: center;">
+        <div class = "transform_animation">
+
+        </div>
+    </div>
     </body>
 
 
