@@ -20,29 +20,20 @@
 
 <script type = "text/javascript">
     function generateRandomColor() {
-        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-        document.body.style.backgroundColor = randomColor;
+        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+       /document.body.style.backgroundColor = randomColor;/
+        document.getElementById('randcolor').innerHTML = randomColor;
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = randomColor;
+        ctx.fillRect(0, 0, 100, 100);
     }
 </script>
+<p></p>
+<p id="randcolor"></p>
 
-
-<style>
-    .Block{
-        text-decoration:none;
-        background:#f9d4ff;
-        display:block;
-        height:10em;
-        width:10em;
-    }
-    .Block{
-        margin:1em;
-    }
-</style>
-
-<div class="Block"> </div>
-
-
-
+<canvas id="myCanvas" width=100 height=100 style="border:3px solid  #000000;">
+</canvas>
 
 
 
