@@ -30,7 +30,33 @@
             }
         </style>
     </head>
+
+
     <body>
+    <h1>The onclick Event</h1>
+    <script>
+        function Function1() {
+            document.getElementById("demo").innerHTML = "BOO!";
+        }
+    </script>
+    <p>Click the button !</p>
+
+
+    <p id="demo"></p>
+    <button onclick="Function1()">Click me</button>
+
     </body>
+
+    <body>
+    <p>Click the button to display the time.</p>
+
+    <button onclick="getElementById('demo').innerHTML=Date()">What is the time?</button>
+
+    <p id="demo"></p>
+
+    </body>
+
+
+
 
 {% endblock %}

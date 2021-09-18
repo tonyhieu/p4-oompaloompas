@@ -31,6 +31,10 @@ def rgb():
     return render_template('minilab/rgb.html', images=rawList, colored=colorList, grayed=grayList)
 
 
+@app.route("/animation")
+def animation():
+    return render_template("sanvi/animation.html")
+
 @app.route("/binary", methods=['GET','POST'])
 def binary():
     if request.form:
@@ -108,9 +112,9 @@ def sanvi():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("individual/sanvi.html", name=name)
+            return render_template("individual/sanvi/sanvi.html", name=name)
     # starting and empty input default
-    return render_template("individual/sanvi.html", name="World")
+    return render_template("individual/sanvi/sanvi.html", name="World")
 
 
 if __name__ == "__main__":
