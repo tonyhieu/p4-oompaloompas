@@ -2,7 +2,7 @@
 {% block content %}
 
 <style>
-    .stickyNote{
+    #board {
         text-decoration:none;
         color:#000;
         background:#ffc;
@@ -11,10 +11,7 @@
         width:10em;
         padding:1em;
         box-shadow: 5px 5px 5px gray;
-    }
-
-    .stickyNote{
-        margin:1em;
+        margin: 1em;
     }
 </style>
 
@@ -41,7 +38,7 @@
 
 <div id="board">
     <div class="stickyNote">
-        <h2>Sticky #1</h2>
+<!--        <h2>Sticky #1</h2>-->
         <p>{{note}}</p>
     </div>
 </div>
@@ -49,11 +46,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     let $board = $('#board');
+    var i = 0;
     $('#add').click(function () {
-        $board.append('<div class="stickyNote"></div>');
+        i++;
+        let class_name = "stickyNote" + i.toString();
+        $board.append('<div class={{class_name}}><p>{{note}}</p></div>');
+        $('#board').addClass(class_name);
+        // document.getElementsByClassName(increment).innerHTML=increment;
     });
     $('#del').click(function () {
-        // $board.append('<div class="stickyNote"></div>');
+        let class_name = "stickyNote" + i.toString();
+        let elem = document.getElementsByClassName(class_name);
+        elem.parentNode.removeChild(elem);
     });
 </script>
 
