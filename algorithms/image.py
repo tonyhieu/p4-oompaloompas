@@ -17,7 +17,7 @@ def image_formatter(img, img_type):
 
 
 # color_data prepares a series of images for data analysis
-def image_data(path="static/assets/images/", img_list=None):  # path of static images is defaulted
+def image_data(path="static/assets/images/", img_list=None, color=True):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Sidu", 'label': "Lost Time Memory", 'file': "anime.png"},
@@ -59,6 +59,17 @@ def image_data(path="static/assets/images/", img_list=None):  # path of static i
                 img_dict['gray_data'].append((average, average, average))
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
+        img_dict['hex_array_GRAY'] = []
+        img_dict['binary_array_GRAY'] = []
+        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        for pixel in img_dict['gray_data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array_GRAY'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array_GRAY'].append(bin_value)
     return img_list  # list is returned with all the attributes for each image dictionary
 
 
