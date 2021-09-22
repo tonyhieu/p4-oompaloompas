@@ -14,15 +14,20 @@ def index():
 def about():
     return render_template("about.html")
 
-@app.route("/minilab")
-def minilab():
-    return render_template("minilab/minilab.html")
-
 
 @app.route('/rgb', methods=["GET", "POST"])
 def rgb():
     return render_template('minilab/rgb.html', images=image_data())
 
+
+@app.route("/variables")
+def variables():
+    return render_template("minilab/tpt/varAndLists.html")
+
+
+@app.route("/bases")
+def bases():
+    return render_template("minilab/numberBases.html")
 
 
 @app.route("/binary", methods=['GET','POST'])
