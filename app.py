@@ -35,12 +35,18 @@ def binary():
     if request.form:
         try:
             bits = request.form.get("bits")
-            if len(bits) != 0:  # input field has content
-                return render_template("minilab/binary.html", bits=int(bits))
+
+            if request.form["picture_change"] == "Light Bulbs": # checks which button is pressed; if light bulbs button is pressed, light bulbs are the picture and vice versa
+                if len(bits) != 0:  
+                  return render_template("minilab/binary.html", bits=int(bits), image_path_on="/static/assets/bulb_on.gif", image_path_off="/static/assets/bulb_off.png")
+            if request.form["picture_change"] == "Mortensen Bulbs":
+                if len(bits) != 0:  # input field has content
+                  return render_template("minilab/binary.html", bits=int(bits), image_path_on="/static/assets/images/linkedinMort.PNG", image_path_off="/static/assets/images/upsetMort.PNG")
+
             # starting and empty input default
         except:
-            return render_template("minilab/binary.html", bits=8)
-    return render_template("minilab/binary.html", bits=8)
+            return render_template("minilab/binary.html", bits=8, image_path_on="/static/assets/bulb_on.gif", image_path_off="/static/assets/bulb_off.png")
+    return render_template("minilab/binary.html", bits=8, image_path_on="/static/assets/bulb_on.gif", image_path_off="/static/assets/bulb_off.png")
 
 @app.route("/journal")
 def journal():
