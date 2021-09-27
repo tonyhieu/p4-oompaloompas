@@ -73,6 +73,10 @@ def anthonyBinary():
 def anthonyShapes():
     return render_template("individual/anthony/shapes.html")
 
+@app.route("/anthony/binary-logic")
+def anthonyBinaryLogic():
+    return render_template("individual/anthony/binary-logic.html")
+
 
 @app.route("/ellen", methods=['GET', 'POST'])
 def ellen():
