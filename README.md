@@ -24,6 +24,19 @@
 
 ## Grading
 
+### October 1
+
+| Member | Job |
+| - | - |
+| Anthony | Unsigned binary addition |
+| Ellen | Image manipulation for RGB |
+| Linda | Base lab, converting decimal to base 2, 8, 64 |
+| Alice | Image lab for RGB |
+
+### September 24
+
+TPT Week, 3/3 across the board
+
 ### September 17
 
 Exploratory week; each member added new snippets and experimented with code
