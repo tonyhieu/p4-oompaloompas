@@ -26,12 +26,13 @@
 
 ### October 1
 
-| Member | Job |
-| - | - |
-| Anthony | Unsigned binary addition |
-| Ellen | Image manipulation for RGB |
-| Linda | Base lab, converting decimal to base 2, 8, 64 |
-| Alice | Image lab for RGB |
+| Member | Job | Ticket |
+| - | - | - |
+| Anthony | Unsigned binary addition | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/44) |
+| Ellen | Image manipulation for RGB | [Ticket]() |
+| Linda | Base lab, converting decimal to base 2, 8, 64 | [Ticket]() |
+| Alice | Image lab for RGB | [Ticket]() |
+| Sanvi | Adding text to image | [Ticket]() |
 
 ### September 24
 
