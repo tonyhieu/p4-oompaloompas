@@ -1,0 +1,110 @@
+{% extends "layouts/base.html" %}
+{% block meta %}
+
+<!-- Distinct styling for on/off -->
+<style>   
+
+.buttonOff {
+    background-color: black;
+    color: white;
+    font-style: normal;
+    height: 2em;
+    font-size: 4em;
+}
+
+.buttonOn {
+    background-color: white;
+    color: black;
+    font-style: italic;
+    height: 2em;
+    font-size: 4em;
+}
+
+.sumBit {
+    color: black;
+    height: 2em;
+    font-size: 4em;
+    border:3px; 
+    border-style: solid; 
+    border-color: black;
+    text-align: center; 
+    background-color: white;
+}
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+{% for j in range(3) %}
+
+{% if j == 0 %}
+<div class="row container-fluid">
+{% else %}
+<div class="row container-fluid mt-5">
+{% endif %}
+
+    <div class="col-sm-2"></div>
+
+    {% if j == 2 %}
+
+    {% for i in range(1, 9) %}
+    <p class="col-sm-1 sumBit" id="sumBit{{i}}">0</p>
+    {% endfor %}
+
+    {% else %}
+
+    {% for i in range(1, 9) %}
+    <button class="col-sm-1" id="bit{{j}}{{i}}" onclick="toggleSwitch('bit{{j}}{{i}}')">0</button>
+    {% endfor %}
+
+    {% endif %}
+</div>
+
+{% endfor %}
+
+<script>
+
+function toggleSwitch (id) {     // toggles button between on and off
+    const element = document.getElementById(id);
+    if (element.innerHTML == "1") {
+        element.innerHTML = "0";
+    } else {
+        element.innerHTML = "1";
+    }
+    element.classList.toggle("buttonOn");
+    element.classList.toggle("buttonOff");
+
+    // calculateByte();
+}
+
+function calculateByte() {    // function that calculates the decimal value for a certain row after one of its buttons is toggled
+    let sum = 0;
+    for (var i = 1; i <= 8; i++) {
+        let element = document.getElementById("bit" + i);
+        sum += Math.pow(2, 8 - i) * parseInt(element.innerHTML);
+    }
+    document.getElementById("sum").innerHTML = "Decimal value: " + sum;
+}
+
+function reset () {   // function to reset all buttons back to off
+    for (var j = 0; j < 2; j++) {
+        for (var i = 1; i <= 8; i++) {
+            const element = document.getElementById("bit" + j + i);
+            element.innerHTML = "0";
+
+            element.classList.add("buttonOff");
+
+            element.classList.remove("buttonOn");
+            
+            // calculateByte();
+        }
+    }
+}
+
+window.onload = reset();  // init buttons
+
+</script>
+
+{% endblock %}
