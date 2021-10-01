@@ -18,8 +18,7 @@
 
 <script type = "text/javascript">
     function generateRandomColor() {
-        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-       /document.body.style.backgroundColor = randomColor;/
+        var randomColor = '#' + Math.floor(Math.random() * 16777216).toString(16);
         document.getElementById('randcolor').innerHTML = randomColor;
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
@@ -43,19 +42,41 @@
 
         if (imageType == 0) {
             document.getElementById("myImg").style.filter= "grayscale(100%)";
+            document.getElementById("myImg2").style.filter= "grayscale(100%)";
+            document.getElementById("myImg3").style.filter= "grayscale(100%)";
+            document.getElementById("myImg4").style.filter= "grayscale(100%)";
+            document.getElementById("myImg5").style.filter= "grayscale(100%)";
             imageType = 1;
         } else {
             document.getElementById("myImg").style.filter= "grayscale(0%)";
+            document.getElementById("myImg2").style.filter= "grayscale(0%)";
+            document.getElementById("myImg3").style.filter= "grayscale(0%)";
+            document.getElementById("myImg4").style.filter= "grayscale(0%)";
+            document.getElementById("myImg5").style.filter= "grayscale(0%)";
             imageType = 0;
         }
     }
 </script>
 
 <button onclick="toggle()">Toggle Colors</button>
-<img src="static/assets/aliceCAT.jpg" id="myImg"  alt="Alice's cat" width="200" height="211" />
+<img src="static/assets/aliceCAT.jpg" id="myImg"  alt="Alice's cat Luca" width="200" height="200" />
+<img src="static/assets/aliceCAT2.jpg" id="myImg2"  alt="Alice's cat Apollo" width="200" height="200" />
+<img src="static/assets/aliceCAT3.jpg" id="myImg3"  alt="Alice's cat Apollo" width="200" height="200" />
+<img src="static/assets/aliceCAT4.jpg" id="myImg4"  alt="Alice's cats, Luca and Apollo" width="200" height="200" />
+<img src="static/assets/aliceCAT5.jpg" id="myImg5"  alt="Alice's cats Luca" width="200" height="200" />
 <br />
 <br>
 <br>
 <br>
+<p>________________________________________________________________________________________________________</p>
+<br>
+<h3>RGB:</h3>
+<br>
+<body>
+<form>
+    <input type="range" name="amountRange" min="0" max="100" value="0" oninput="this.form.amountInput.value=this.value" />
+    <input type="number" name="amountInput" min="0" max="100" value="0" oninput="this.form.amountRange.value=this.value" />
+</form>
+</body>
 
 {% endblock %}
