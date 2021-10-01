@@ -30,6 +30,11 @@ def bases():
     return render_template("minilab/numberBases.html")
 
 
+@app.route("/binary-addition")
+def binary_addition():
+    return render_template("minilab/binary-addition.html")
+
+
 @app.route("/binary", methods=['GET','POST'])
 def binary():
     if request.form:
