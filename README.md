@@ -32,7 +32,7 @@
 | Ellen | Image manipulation for RGB | [Ticket]() |
 | Linda | Base lab, converting decimal to base 2, 8, 64 | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/37) |
 | Alice | Image lab for RGB | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/35) |
-| Sanvi | Adding text to image | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/34) |
+| Sanvi | Blurring image, rotating image, resizing image | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/34) |
 
 ### September 24
 
