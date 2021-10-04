@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import wikipedia
 from algorithms.image import image_data
+from PIL import Image, ImageDraw, ImageFont
 
 
 app = Flask("app")
@@ -126,6 +127,6 @@ def sanvi():
     # starting and empty input default
     return render_template("individual/sanvi/sanvi.html", name="World")
 
-
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)
+
