@@ -49,6 +49,11 @@ def image_data(path="static/assets/images/", img_list=None, color=True):  # path
         img_dict['base64_CROP'] = image_formatter(crop_image, img_dict['format'])
         img_dict['crop_data'] = numpy.array(crop_image.getdata())
 
+        text_image = ImageDraw.Draw(img_reference)
+        text_image.text((0,0), "Hello, World!", fill=(255, 0, 0))
+        # img_dict['base64_TEXT'] = image_formatter(text_image, img_dict['format'])
+        # img_dict['text_data'] = numpy.array(text_image.getdata())
+
         # Numpy is used to allow easy access to data of image, python list
         img_dict['data'] = numpy.array(img_data)
         img_dict['hex_array'] = []

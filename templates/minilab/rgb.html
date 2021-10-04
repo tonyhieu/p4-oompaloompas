@@ -54,6 +54,18 @@
         }
     }
 
+    function textimage() {
+        if (imageType == 0) {
+            $('#colored').hide()
+            $('#textimage').show()
+            imageType = 1;
+        } else {
+            $('#textimage').hide()
+            $('#colored').show()
+            imageType = 0;
+        }
+    }
+
     // var color = {{ colored|safe }}
     // var gray = {{ grayed|safe }}
     // var imageType = 0; // 0 is color, 1 is gray
@@ -93,6 +105,7 @@
         <button onclick="blurimage()">Blur Images!</button>
         <button onclick="rotateimage()">Rotate Images!</button>
         <button onclick="cropimage()">Crop Images!</button>
+        <button onclick="textimage()">Add Text to Images!</button>
         <div class="row justify-content-md-center" id="colored">
             <table class="table">
                 <thead>
@@ -385,6 +398,7 @@
             $('#blurimage').hide()
             $('#rotateimage').hide()
             $('#cropimage').hide()
+            $('#textimage').hide()
         });
     </script>
 {% endblock %}
