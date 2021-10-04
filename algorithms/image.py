@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 import numpy
 import base64
 from io import BytesIO
@@ -36,10 +36,24 @@ def image_data(path="static/assets/images/", img_list=None, color=True):  # path
         img_dict['size'] = img_reference.size
         # Conversion of original Image to Base64, a string format that serves HTML nicely
         img_dict['base64'] = image_formatter(img_reference, img_dict['format'])
+
+        blur_image = img_reference.filter(ImageFilter.GaussianBlur(5))
+        img_dict['base64_BLUR'] = image_formatter(blur_image, img_dict['format'])
+        img_dict['blur_data'] = numpy.array(blur_image.getdata())
+
+        rotate_image = img_reference.transpose(Image.FLIP_LEFT_RIGHT)
+        img_dict['base64_ROTATE'] = image_formatter(rotate_image, img_dict['format'])
+        img_dict['rotate_data'] = numpy.array(rotate_image.getdata())
+
+        crop_image = img_reference.crop((1, 2, 300, 300))
+        img_dict['base64_CROP'] = image_formatter(crop_image, img_dict['format'])
+        img_dict['crop_data'] = numpy.array(crop_image.getdata())
+
         # Numpy is used to allow easy access to data of image, python list
         img_dict['data'] = numpy.array(img_data)
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
+        img_dict['gray_data'] = []
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
             # hexadecimal conversions
@@ -49,9 +63,7 @@ def image_data(path="static/assets/images/", img_list=None, color=True):  # path
             # binary conversions
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
-        # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
-        img_dict['gray_data'] = []
-        for pixel in img_dict['data']:
+            # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
             average = (pixel[0] + pixel[1] + pixel[2]) // 3
             if len(pixel) > 3:
                 img_dict['gray_data'].append((average, average, average, pixel[3]))
@@ -61,6 +73,7 @@ def image_data(path="static/assets/images/", img_list=None, color=True):  # path
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
         img_dict['hex_array_GRAY'] = []
         img_dict['binary_array_GRAY'] = []
+
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['gray_data']:
             # hexadecimal conversions
@@ -70,6 +83,43 @@ def image_data(path="static/assets/images/", img_list=None, color=True):  # path
             # binary conversions
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array_GRAY'].append(bin_value)
+
+        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        img_dict['hex_array_BLUR'] = []
+        img_dict['binary_array_BLUR'] = []
+        for pixel in img_dict['blur_data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array_BLUR'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array_BLUR'].append(bin_value)
+
+        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        img_dict['hex_array_ROTATE'] = []
+        img_dict['binary_array_ROTATE'] = []
+        for pixel in img_dict['rotate_data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array_ROTATE'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array_ROTATE'].append(bin_value)
+
+        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        img_dict['hex_array_CROP'] = []
+        img_dict['binary_array_CROP'] = []
+        for pixel in img_dict['crop_data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array_CROP'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array_CROP'].append(bin_value)
+
     return img_list  # list is returned with all the attributes for each image dictionary
 
 

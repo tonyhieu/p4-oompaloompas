@@ -15,8 +15,8 @@
 <!-- DONE Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
-{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
-{% set imgBulbOff = "/static/assets/bulb_off.png" %}
+{% set imgBulbOn = image_path_on %}   <!-- pass flask variables into jinja -->
+{% set imgBulbOff = image_path_off %}
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
@@ -47,7 +47,7 @@
          below ASCII for more ideas of where to make changes
          */
         let text = String.fromCharCode(parseInt(parseInt(binary, 2).toString(10)));
-        document.getElementById('ascii').innerHTML = text;
+        document.getElementById('ascii').innerHTML = text;    // set ascii in the table
     }
 
     // algorithm to convert decimal to base using division and remainder
@@ -122,7 +122,8 @@
 <form action="/binary" id="bits" method="POST" >
     <label for="bits">Enter Bit Size</label>
     <input name="bits">
-    <input type="submit" value="Go!">
+    <input type="submit" name="picture_change" value="Mortensen Bulbs">   <!-- Buttons to change image, take note of the value tag -->
+    <input type="submit" name="picture_change" value="Light Bulbs">
 </form>
 
 <div class="container">
