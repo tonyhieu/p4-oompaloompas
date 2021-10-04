@@ -7,7 +7,7 @@
 <br />
 
 <div class="row">
-    <div class="col-sm-1"></div>
+    <div class="col-sm-1"></div> <!-- Jinja for loops to create buttons -->
     {% for i in range(1, 9) %}
     <button class="col-sm-1" id="r{{i}}" onclick="toggleSwitch('r{{i}}')">0</button>
     {% endfor %}
@@ -45,7 +45,7 @@
 
 <br />
 
-<div class="offset-sm-1 col-sm-10" id="color" style="background-color: #000000; height: 20vh;">
+<div class="offset-sm-1 col-sm-10" id="color" style="background-color: #000000; height: 20vh;">  <!-- Div that shows off color -->
 </div>
 <p style="text-align: center;" id="code">Hexcode: #000000</p>
 
@@ -59,7 +59,7 @@ var red = 0;
 var green = 0;
 var blue = 0;
 
-function toggleSwitch (id) {
+function toggleSwitch (id) {     // toggles button between on and off
     const element = document.getElementById(id);
     if (element.innerHTML == "1") {
         element.innerHTML = "0";
@@ -72,7 +72,7 @@ function toggleSwitch (id) {
     calculateRow(id.charAt(0));
 }
 
-function calculateRow (color) {
+function calculateRow (color) {    // function that calculates the decimal value for a certain row after one of its buttons is toggled
     let sum = 0;
     for (var i = 1; i <= 8; i++) {
         let element = document.getElementById(color + i);
@@ -95,7 +95,7 @@ function calculateRow (color) {
     setColorCode();
 }
 
-function setColorCode () {
+function setColorCode () {    // uses values from each row to create a color
     let r = red.toString(16);
     let g = green.toString(16);
     let b = blue.toString(16);
@@ -115,7 +115,7 @@ function setColorCode () {
     document.getElementById("code").innerHTML = "Hexcode: " + code;
 }
 
-function reset () {
+function reset () {   // function to reset all buttons back to off
     for (var i = 1; i <= 8; i++) {
         document.getElementById('r' + i).innerHTML = "0";
         document.getElementById('g' + i).innerHTML = "0";
@@ -135,11 +135,12 @@ function reset () {
     }
 }
 
-window.onload = reset();
+window.onload = reset();  // init buttons
 
 </script>
 
-<style>
+<!-- Distinct styling for on/off -->
+<style>   
 
 .buttonOff {
     background-color: black;

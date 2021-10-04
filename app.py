@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import wikipedia
 from algorithms.image import image_data
+from PIL import Image, ImageDraw, ImageFont
 
 
 app = Flask("app")
@@ -22,12 +23,25 @@ def rgb():
 
 @app.route("/variables")
 def variables():
-    return render_template("minilab/tpt/varAndLists.html")
+    if request.form:
+        try:
+            list1 = request.form.get("list1")
+            if len(list1) != 0:  # input field has content
+                return render_template("minilab/tpt/varAndLists.html", list1 = list1)
+            # starting and empty input default
+        except:
+            return render_template("minilab/tpt/varAndLists.html", list1 = [])
+    return render_template("minilab/tpt/varAndLists.html", list1 = [])
 
 
 @app.route("/bases")
 def bases():
     return render_template("minilab/numberBases.html")
+
+
+@app.route("/binary-addition")
+def binary_addition():
+    return render_template("minilab/binary-addition.html")
 
 
 @app.route("/binary", methods=['GET','POST'])
@@ -73,6 +87,10 @@ def anthonyBinary():
 def anthonyShapes():
     return render_template("individual/anthony/shapes.html")
 
+@app.route("/anthony/binary-logic")
+def anthonyBinaryLogic():
+    return render_template("individual/anthony/binary-logic.html")
+
 
 @app.route("/ellen", methods=['GET', 'POST'])
 def ellen():
@@ -117,6 +135,6 @@ def sanvi():
     # starting and empty input default
     return render_template("individual/sanvi/sanvi.html", name="World")
 
-
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)
+

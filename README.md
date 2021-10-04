@@ -24,6 +24,20 @@
 
 ## Grading
 
+### October 1
+
+| Member | Job | Ticket |
+| - | - | - |
+| Anthony | Unsigned binary addition | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/44) |
+| Ellen | Image manipulation for RGB | [Ticket]() |
+| Linda | Base lab, converting decimal to base 2, 8, 64 | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/37) |
+| Alice | Individual Greyscale | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/46) |
+| Sanvi | Blurring image, rotating image, resizing image | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/34) |
+
+### September 24
+
+TPT Week, 3/3 across the board
+
 ### September 17
 
 Exploratory week; each member added new snippets and experimented with code
