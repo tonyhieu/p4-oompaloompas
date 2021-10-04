@@ -51,8 +51,10 @@ def image_data(path="static/assets/images/", img_list=None, color=True):  # path
 
         text_image = ImageDraw.Draw(img_reference)
         text_image.text((0,0), "Hello, World!", fill=(255, 0, 0))
-        # img_dict['base64_TEXT'] = image_formatter(text_image, img_dict['format'])
-        # img_dict['text_data'] = numpy.array(text_image.getdata())
+        img_dict['base64_TEXT'] = image_formatter(img_reference, img_dict['format'])
+        img_dict['text_data'] = numpy.array(img_reference.getdata())
+        # text_image.show()
+        # text_image.save("static/assets/images/temp.jpg")
 
         # Numpy is used to allow easy access to data of image, python list
         img_dict['data'] = numpy.array(img_data)
@@ -124,6 +126,18 @@ def image_data(path="static/assets/images/", img_list=None, color=True):  # path
             # binary conversions
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array_CROP'].append(bin_value)
+
+        # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
+        img_dict['hex_array_TEXT'] = []
+        img_dict['binary_array_TEXT'] = []
+        for pixel in img_dict['text_data']:
+            # hexadecimal conversions
+            hex_value = hex(pixel[0])[-2:] + hex(pixel[1])[-2:] + hex(pixel[2])[-2:]
+            hex_value = hex_value.replace("x", "0")
+            img_dict['hex_array_TEXT'].append("#" + hex_value)
+            # binary conversions
+            bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
+            img_dict['binary_array_TEXT'].append(bin_value)
 
     return img_list  # list is returned with all the attributes for each image dictionary
 
