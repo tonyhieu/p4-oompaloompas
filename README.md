@@ -31,7 +31,7 @@
 | Anthony | Unsigned binary addition | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/44) |
 | Ellen | Image manipulation for RGB | [Ticket]() |
 | Linda | Base lab, converting decimal to base 2, 8, 64 | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/37) |
-| Alice | Image lab for RGB | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/35) |
+| Alice | Individual Greyscale | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/46) |
 | Sanvi | Blurring image, rotating image, resizing image | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/34) |
 
 ### September 24

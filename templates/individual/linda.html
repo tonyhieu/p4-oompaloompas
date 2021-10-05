@@ -32,6 +32,34 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the time.</p>
+
+<button onclick="getElementById('demo').innerHTML=Date()">What is the time?</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p onclick="myFunction(this, 'blue')">Click me to change my text color.</p>
+
+<script>
+    function myFunction(elmnt,clr) {
+        elmnt.style.color = clr;
+    }
+</script>
+
+</body>
+</html>
+
 
 {% endblock %}
 
