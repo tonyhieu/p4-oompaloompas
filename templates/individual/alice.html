@@ -59,7 +59,7 @@
     }
 </style>
 
-<p>Use the slider to increment or decrement value.</p>
+<p>Grayscale</p>
 
 <div class="rangeslider">
     <input type="range" min="0" max="100" value="0"
@@ -70,16 +70,10 @@
 <script>
     var rangeslider = document.getElementById("sliderRange");
     var output = document.getElementById("demo");
-    output.innerHTML = rangeslider.value;
     rangeslider.oninput = function() {
         output.innerHTML = this.value;
-    }
-
-    function grayscale() {
-        var sliderVal = document.getElementById("sliderRange").value;
-        grayFilter="grayscale("+sliderVal+"%)";
-        <!-->document.getElementById('displayValue').innerHTML = grayFilter;-->
-        <!--> grayFilter="grayscale(100%)"; -->
+        var sliderVal = this.value;
+        var grayFilter="grayscale("+sliderVal+"%)";
         document.getElementById("myImg").style.filter= grayFilter;
         document.getElementById("myImg2").style.filter= grayFilter;
         document.getElementById("myImg3").style.filter= grayFilter;
@@ -127,7 +121,6 @@
 </script>
 
 
-<button onclick="grayscale()">Grayscale</button>
 <button onclick="blurfilter()">Blur</button>
 <button onclick="invertfilter()">Invert</button>
 <img src="static/assets/aliceCAT.jpg" id="myImg"  alt="Alice's cat Luca" width="200" height="200" />
