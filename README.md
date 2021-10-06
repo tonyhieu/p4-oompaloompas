@@ -24,6 +24,18 @@
 
 ## Grading
 
+
+### October 8
+
+| Member | Work | Ticket |
+| - | - | - |
+| Anthony | Unsigned binary addition, binary logic gate | [Addition Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/44) and [Binary Logic Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/42)|
+| Ellen | Image manipulation for RGB | [Ticket]() |
+| Linda | Base lab, converting decimal to base 2, 8, 64 | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/37) |
+| Alice | Individual Greyscale | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/46) |
+| Sanvi | Logic gate lab | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/projects/1#card-70285209) |
+
+
 ### October 1
 
 | Member | Job | Ticket |

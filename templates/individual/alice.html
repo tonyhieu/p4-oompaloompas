@@ -34,36 +34,100 @@
 
 <p>________________________________________________________________________________________________________</p>
 <br>
-<h3>Greyscale:</h3>
-<br>
-<script>
-    var imageType = 0; // 0 is color, 1 is gray
-    function toggle() {
+<h3>Image Manipulation:</h3>
 
-        if (imageType == 0) {
-            document.getElementById("myImg").style.filter= "grayscale(100%)";
-            document.getElementById("myImg2").style.filter= "grayscale(100%)";
-            document.getElementById("myImg3").style.filter= "grayscale(100%)";
-            document.getElementById("myImg4").style.filter= "grayscale(100%)";
-            document.getElementById("myImg5").style.filter= "grayscale(100%)";
-            imageType = 1;
+<style>
+    .rangeslider{
+        width: 50%;
+    }
+    .myslider {
+        -webkit-appearance: none;
+        background: #FCF3CF  ;
+        width: 50%;
+        height: 20px;
+        opacity: 2;
+    }
+    .myslider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        cursor: pointer;
+        background: #34495E  ;
+        width: 5%;
+        height: 20px;
+    }
+    .myslider:hover {
+        opacity: 1;
+    }
+</style>
+
+<p>Grayscale</p>
+
+<div class="rangeslider">
+    <input type="range" min="0" max="100" value="0"
+           class="myslider" id="sliderRange">
+    <p>Value: <span id="demo"></span></p>
+</div>
+
+<script>
+    var rangeslider = document.getElementById("sliderRange");
+    var output = document.getElementById("demo");
+    rangeslider.oninput = function() {
+        output.innerHTML = this.value;
+        var sliderVal = this.value;
+        var grayFilter="grayscale("+sliderVal+"%)";
+        document.getElementById("myImg").style.filter= grayFilter;
+        document.getElementById("myImg2").style.filter= grayFilter;
+        document.getElementById("myImg3").style.filter= grayFilter;
+        document.getElementById("myImg4").style.filter= grayFilter;
+        document.getElementById("myImg5").style.filter= grayFilter;
+    }
+
+    var imageBlur = 0;
+    function blurfilter() {
+        if (imageBlur == 0) {
+            document.getElementById("myImg").style.filter= "blur(2px)";
+            document.getElementById("myImg2").style.filter= "blur(2px)";
+            document.getElementById("myImg3").style.filter= "blur(2px)";
+            document.getElementById("myImg4").style.filter= "blur(2px)";
+            document.getElementById("myImg5").style.filter= "blur(2px)";
+            imageBlur = 1;
         } else {
-            document.getElementById("myImg").style.filter= "grayscale(0%)";
-            document.getElementById("myImg2").style.filter= "grayscale(0%)";
-            document.getElementById("myImg3").style.filter= "grayscale(0%)";
-            document.getElementById("myImg4").style.filter= "grayscale(0%)";
-            document.getElementById("myImg5").style.filter= "grayscale(0%)";
-            imageType = 0;
+            document.getElementById("myImg").style.filter= "blur(0px)";
+            document.getElementById("myImg2").style.filter= "blur(0px)";
+            document.getElementById("myImg3").style.filter= "blur(0px)";
+            document.getElementById("myImg4").style.filter= "blur(0px)";
+            document.getElementById("myImg5").style.filter= "blur(0px)";
+            imageBlur = 0;
+        }
+    }
+
+    var imageInvert = 0;
+    function invertfilter() {
+        if (imageInvert == 0) {
+            document.getElementById("myImg").style.filter= "invert(100%)";
+            document.getElementById("myImg2").style.filter= "invert(100%)";
+            document.getElementById("myImg3").style.filter= "invert(100%)";
+            document.getElementById("myImg4").style.filter= "invert(100%)";
+            document.getElementById("myImg5").style.filter= "invert(100%)";
+            imageInvert = 1;
+        } else {
+            document.getElementById("myImg").style.filter= "invert(0%)";
+            document.getElementById("myImg2").style.filter= "invert(0%)";
+            document.getElementById("myImg3").style.filter= "invert(0%)";
+            document.getElementById("myImg4").style.filter= "invert(0%)";
+            document.getElementById("myImg5").style.filter= "invert(0%)";
+            imageInvert = 0;
         }
     }
 </script>
 
-<button onclick="toggle()">Toggle Colors</button>
+
+<button onclick="blurfilter()">Blur</button>
+<button onclick="invertfilter()">Invert</button>
 <img src="static/assets/aliceCAT.jpg" id="myImg"  alt="Alice's cat Luca" width="200" height="200" />
 <img src="static/assets/aliceCAT2.jpg" id="myImg2"  alt="Alice's cat Apollo" width="200" height="200" />
 <img src="static/assets/aliceCAT3.jpg" id="myImg3"  alt="Alice's cat Apollo" width="200" height="200" />
 <img src="static/assets/aliceCAT4.jpg" id="myImg4"  alt="Alice's cats, Luca and Apollo" width="200" height="200" />
-<img src="static/assets/aliceCAT5.jpg" id="myImg5"  alt="Alice's cats Luca" width="200" height="200" />
+<img src="static/assets/aliceCAT5.jpg" id="myImg5"  alt="Alice's cat Luca" width="200" height="200" />
 <br />
 <br>
 <br>
