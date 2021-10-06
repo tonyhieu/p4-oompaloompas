@@ -33,7 +33,7 @@
 | Ellen | Image manipulation for RGB | [Ticket]() |
 | Linda | Base lab, converting decimal to base 2, 8, 64 | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/37) |
 | Alice | Individual Greyscale | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/46) |
-| Sanvi | Blurring image, rotating image, resizing image | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/34) |
+| Sanvi | Logic gate lab | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/projects/1#card-70285209) |
 
 
 ### October 1
