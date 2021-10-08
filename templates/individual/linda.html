@@ -32,6 +32,61 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the time.</p>
+
+<button onclick="getElementById('demo').innerHTML=Date()">What is the time?</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p onclick="myFunction(this, 'blue')">Click me to change my text color.</p>
+
+<script>
+    function myFunction(elmnt,clr) {
+        elmnt.style.color = clr;
+    }
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>
+    Change the Background Color
+</title>
+<script>
+    /* script to set background color */
+    function geeks() {
+        document.body.style.backgroundColor =
+            "#778da9";
+    }
+</script>
+</head>
+
+<h1>
+    Change the Background Color
+</h1>
+
+<button type="button" onclick="geeks()">
+    Submit
+</button>
+</body>
+</html
+
 
 {% endblock %}
 

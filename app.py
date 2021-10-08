@@ -23,7 +23,15 @@ def rgb():
 
 @app.route("/variables")
 def variables():
-    return render_template("minilab/tpt/varAndLists.html")
+    if request.form:
+        try:
+            list1 = request.form.get("list1")
+            if len(list1) != 0:  # input field has content
+                return render_template("minilab/tpt/varAndLists.html", list1 = list1)
+            # starting and empty input default
+        except:
+            return render_template("minilab/tpt/varAndLists.html", list1 = [])
+    return render_template("minilab/tpt/varAndLists.html", list1 = [])
 
 
 @app.route("/bases")
