@@ -14,6 +14,7 @@
 
     <div class="offset-sm-1 col-sm-2">
         <p id="r">Decimal value: 0</p>
+        <div style="height: 2em; background-color: #000000;" id="red"></div>
     </div>
 </div>
 
@@ -27,6 +28,7 @@
 
     <div class="offset-sm-1 col-sm-2">
         <p id="g">Decimal value: 0</p>
+        <div style="height: 2em; background-color: #000000;" id="green"></div>
     </div>
 </div>
 
@@ -40,6 +42,7 @@
 
     <div class="offset-sm-1 col-sm-2">
         <p id="b">Decimal value: 0</p>
+        <div style="height: 2em; background-color: #000000;" id="blue"></div>
     </div>
 </div>
 
@@ -82,16 +85,20 @@ function calculateRow (color) {    // function that calculates the decimal value
     switch (color) {
         case 'r':
             red = sum;
+            document.getElementById("red").style.backgroundColor = "#" + red.toString(16) + "0000";
             break;
         case 'g':
             green = sum;
+            document.getElementById("green").style.backgroundColor = "#" + "00" + green.toString(16) + "00";
             break;
         case 'b':
             blue = sum;
+            document.getElementById("blue").style.backgroundColor = "#0000" + blue.toString(16);
             break;
         default:
             break;
     }
+    
     setColorCode();
 }
 
