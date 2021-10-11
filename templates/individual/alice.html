@@ -14,7 +14,39 @@
 <br>
 <h2>Random Color Generator:</h2>
 
-<input type = "button" onclick = "generateRandomColor()" value = "Generate">
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <input type = "button" onclick = "generateRandomColor()" value = "Generate">
+        </div>
+        <div class="col-sm">
+            <canvas id="myCanvas" width=100 height=75 style="border:3px solid  #000000;">
+            </canvas>
+        </div>
+        <div class="col-sm">
+            <p id="randcolor"></p>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div><div class="col">
+    </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
 
 <script type = "text/javascript">
     function generateRandomColor() {
@@ -26,11 +58,8 @@
         ctx.fillRect(0, 0, 100, 75);
     }
 </script>
-<p></p>
-<p id="randcolor"></p>
 
-<canvas id="myCanvas" width=100 height=75 style="border:3px solid  #000000;">
-</canvas>
+
 
 <p>________________________________________________________________________________________________________</p>
 <br>
@@ -128,7 +157,7 @@
 <img src="static/assets/aliceCAT3.jpg" id="myImg3"  alt="Alice's cat Apollo" width="100" height="100" />
 <img src="static/assets/aliceCAT4.jpg" id="myImg4"  alt="Alice's cats, Luca and Apollo" width="100" height="100" />
 <img src="static/assets/aliceCAT5.jpg" id="myImg5"  alt="Alice's cat Luca" width="100" height="100" />
-<br />
+<br>
 <br>
 
 <p>________________________________________________________________________________________________________</p>
@@ -145,12 +174,12 @@
     <option value="6">XNOR</option>
 </select>
 
-<button id="v1" onclick="toggleBool('v1')">0</button>
-<button id="v2" onclick="toggleBool('v2')">0</button>
+<button id="v1" onclick="toggle('v1')">0</button>
+<button id="v2" onclick="toggle('v2')">0</button>
 <input id="result">
 
 <script>
-    function toggleBool(id) {  // Toggles 0 and 1
+    function toggle(id) {  // Toggles 0 and 1
         const element = document.getElementById(id);
         if (element.innerHTML == 1) {
             element.innerHTML = 0;
