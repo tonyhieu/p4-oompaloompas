@@ -123,11 +123,11 @@
 
 <button onclick="blurfilter()">Blur</button>
 <button onclick="invertfilter()">Invert</button>
-<img src="static/assets/aliceCAT.jpg" id="myImg"  alt="Alice's cat Luca" width="200" height="200" />
-<img src="static/assets/aliceCAT2.jpg" id="myImg2"  alt="Alice's cat Apollo" width="200" height="200" />
-<img src="static/assets/aliceCAT3.jpg" id="myImg3"  alt="Alice's cat Apollo" width="200" height="200" />
-<img src="static/assets/aliceCAT4.jpg" id="myImg4"  alt="Alice's cats, Luca and Apollo" width="200" height="200" />
-<img src="static/assets/aliceCAT5.jpg" id="myImg5"  alt="Alice's cat Luca" width="200" height="200" />
+<img src="static/assets/aliceCAT.jpg" id="myImg"  alt="Alice's cat Luca" width="100" height="100" />
+<img src="static/assets/aliceCAT2.jpg" id="myImg2"  alt="Alice's cat Apollo" width="100" height="100" />
+<img src="static/assets/aliceCAT3.jpg" id="myImg3"  alt="Alice's cat Apollo" width="100" height="100" />
+<img src="static/assets/aliceCAT4.jpg" id="myImg4"  alt="Alice's cats, Luca and Apollo" width="100" height="100" />
+<img src="static/assets/aliceCAT5.jpg" id="myImg5"  alt="Alice's cat Luca" width="100" height="100" />
 <br />
 <br>
 
@@ -147,23 +147,22 @@
 
 <button id="v1" onclick="toggleBool('v1')">0</button>
 <button id="v2" onclick="toggleBool('v2')">0</button>
+<input id="result">
 
 <script>
     function toggleBool(id) {  // Toggles 0 and 1
         const element = document.getElementById(id);
-
         if (element.innerHTML == 1) {
             element.innerHTML = 0;
         } else {
             element.innerHTML = 1;
         }
-        logic();
+        logic()
     }
-</script>
 
-<input id="result">
-
-<script>
+    document.getElementById('gate').addEventListener('change', logic);
+    // document.getElementById('v1').addEventListener('change', logic);           these 2 not needed bc logic function is run when 01 buttons are toggled
+    // document.getElementById('v2').addEventListener('change', logic);
 
     function logic() {
         var Gate = document.getElementById('gate');
@@ -190,13 +189,11 @@
                 case 4: //NAND   cannot both true
                     result = (!(v1Value && v2Value)) ? 'true' : 'false';
                     break;
-                case 5: //NOR    cannot any true
+                case 5: //NOR    cannot any true, 0 true
                     result = (!(v1Value || v2Value)) ? 'true' : 'false';
                     break;
                 case 6: //XNOR   same
                     result = (v1Value == v2Value) ? 'true' : 'false';
-                    break;
-                default:
                     break;
             }
         }
