@@ -44,6 +44,10 @@ def bases():
 def binary_addition():
     return render_template("minilab/binary-addition.html")
 
+@app.route("/signed-binary-addition.html")
+def signed_binary_addition():
+    return render_template("minilab/signed-binary-addition.html")
+
 
 @app.route("/binary", methods=['GET','POST'])
 def binary():
