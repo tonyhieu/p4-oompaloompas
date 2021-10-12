@@ -162,8 +162,5 @@ def sanvi():
     return render_template("individual/sanvi/sanvi.html", name="World")
 
 if __name__ == "__main__":
-    so_file = "algorithms/tptOctEleven.so"
-    functions = CDLL(so_file)
-    print(functions.findTs(9))
     app.run(host="127.0.0.1", port=8080)
 
