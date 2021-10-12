@@ -121,10 +121,17 @@ def linda():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("individual/linda.html", name=name)
+            return render_template("individual/Linda/linda.html", name=name)
     # starting and empty input default
-    return render_template("individual/linda.html", name="World")
+    return render_template("individual/Linda/linda.html", name="World")
 
+@app.route("/quoteGen")
+def quoteGen():
+    return render_template("individual/Linda/quoteGen.html")
+
+@app.route("/message")
+def message():
+    return render_template("individual/Linda/message.html")
 
 @app.route('/sanvi', methods=['GET', 'POST'])
 def sanvi():
