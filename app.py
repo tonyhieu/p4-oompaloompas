@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import wikipedia
 from algorithms.image import image_data
 from PIL import Image, ImageDraw, ImageFont
+from ctypes import *
 
 
 app = Flask("app")
@@ -90,6 +91,24 @@ def anthonyShapes():
 @app.route("/anthony/binary-logic")
 def anthonyBinaryLogic():
     return render_template("individual/anthony/binary-logic.html")
+
+@app.route("/nested-and-iteration", methods=['GET', 'POST'])
+def nested_and_iteration():
+    so_file = "algorithms/tptOctEleven.so"
+    functions = CDLL(so_file)
+    if request.form.get("size"):
+        size = request.form.get("size")
+        if len(size) != 0:  # input field has content
+            size = int(size)
+            return render_template("minilab/tpt/nested-and-iteration.html", arr=create_array(size), ts=functions.findTs(size))
+    return render_template("minilab/tpt/nested-and-iteration.html", arr=create_array(20), ts=functions.findTs(20))
+
+def create_array (size):
+    arr = []
+    for i in range(int(size)):
+        arr.append(i)
+    return arr
+
 
 
 @app.route("/ellen", methods=['GET', 'POST'])
