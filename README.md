@@ -33,7 +33,7 @@
 | Ellen | Logic gate lab | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/48) |
 | Linda | Base lab, converting decimal to base 2, 8, 64 | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/37) |
 | Alice | replicating Logic gate lab| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/48) |
-| Sanvi | Signed Binary | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/projects/1#card-70285209) |
+| Sanvi | Signed Binary | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/projects/1#card-70444294) |
 
 
 ### October 1
