@@ -32,7 +32,7 @@
 }
 
 .operatorButton {
-    background-color: rgb(0, 215, 253);
+    background-color: rgb(207, 0, 253);
     color: black;
     font-style: normal;
     height: 2em;
@@ -57,7 +57,7 @@ table, th, td {
 <div class="row container-fluid mt-5">
 {% endif %}
 
-    {% if j == 2 %}  <!-- i have no clue how to format jinja but we're gonna do it like this... looks super ugly still -->
+    {% if j == 2 %}
 
     <div class="col-sm-1"></div>
     {% for i in range(1, 10) %}
@@ -101,7 +101,7 @@ table, th, td {
 
 <script>
 
-function toggleSwitch (id) {     // toggles button between on and off
+function toggleSwitch (id) {     // toggles button between on and off, first bit toggles between signs
     const element = document.getElementById(id);
     if (element.innerHTML == "1") {
         setBit(id, 0);
@@ -187,7 +187,7 @@ function returnRow (row) { // get all bits and put them into an array
     return bitArr;
 }
 
-function addRows () { // add the rows together (unsigned)
+function addRows () { // add the rows together (signed)
     let bitArr1 = returnRow(0);
     let bitArr2 = returnRow(1);
     let row1Sum = calculateRow("bit0", 8);
@@ -201,7 +201,7 @@ function addRows () { // add the rows together (unsigned)
         sum = sum*-1;
     }
 
-    for (var i = 8; i >= 1; i--) {
+    for (var i = 8; i >= 1; i--) { //loops over last 7 bits
         if (sum % 2)
             result[i] = 1;
         else
@@ -227,7 +227,7 @@ function calculateRow (prefix, number) { // converts binary to decimal given a c
     let element = document.getElementById(prefix + 1);
     let sign = parseInt(element.innerHTML);
     for (var i = 2; i <= number; i++) {
-        element = document.getElementById(prefix + i);  // could probably make this more efficient/nicer looking with the returnRow function....
+        element = document.getElementById(prefix + i);
         sum += Math.pow(2, number - i) * parseInt(element.innerHTML);
     }
     if (sign)
