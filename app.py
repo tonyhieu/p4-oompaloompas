@@ -129,6 +129,9 @@ def linda():
 def quoteGen():
     return render_template("individual/Linda/quoteGen.html")
 
+@app.route("/message")
+def message():
+    return render_template("individual/Linda/message.html")
 
 @app.route('/sanvi', methods=['GET', 'POST'])
 def sanvi():
