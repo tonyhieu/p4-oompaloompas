@@ -13,16 +13,25 @@
         box-shadow: 5px 5px 5px gray;
         margin: 1em;
     }
+
+    table, th, td {
+        border: 1px solid black;
+        width: 50%;
+    }
 </style>
 
 <h1>Ellen Xu Individual Labs</h1>
 <p>Hello {{name}}, I'm Ellen! Check out some of my mini projects below :) </p>
+
+<!-- Name Mini project -->
 
 <form action="/ellen" id="ellen" method="POST" >
     <label for="name">Enter Your Name</label>
     <input name="name" id="name">
     <input type="submit" value="Go!">
 </form>
+
+<!-- Sticky Note Mini project -->
 
 <br>
 <h2>Sticky Notes</h2>
@@ -59,6 +68,56 @@
         let elem = document.getElementsByClassName(class_name);
         elem.parentNode.removeChild(elem);
     });
+</script>
+
+<!-- Binary Operations Mini project -->
+
+<br>
+<h2>Logic Gate</h2>
+
+<input type="checkbox" id="A" value="A">
+<label for="A"> A</label><br>
+
+<input type="checkbox" id="B" value="B">
+<label for="B"> B</label><br>
+
+<button id="submit" onclick="logic()">Submit</button>
+<br>
+
+<table>
+    <tr>
+        <th>Logic Gate</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>AND</td>
+        <td id="AND">---</td>
+    </tr>
+    <tr>
+        <td>OR</td>
+        <td id="OR">---</td>
+    </tr>
+    <tr>
+        <td>XOR</td>
+        <td id="XOR">---</td>
+    </tr>
+</table>
+<br>
+
+<script>
+    function logic() {
+        var A = document.getElementById('A');
+        var B = document.getElementById('B');
+
+        var inputA = document.querySelector('input[id=A]');
+        var valA = inputA.checked ? true : false;
+        var inputB = document.querySelector('input[id=B]');
+        var valB = inputB.checked ? true : false;
+
+        document.getElementById('AND').innerHTML = valA && valB ? 'true' : 'false';
+        document.getElementById('OR').innerHTML = valA || valB ? 'true' : 'false';
+        document.getElementById('XOR').innerHTML = (valA && !valB) || (!valA && valB) ? 'true' : 'false';
+    }
 </script>
 
 {% endblock %}

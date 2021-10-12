@@ -14,7 +14,39 @@
 <br>
 <h2>Random Color Generator:</h2>
 
-<input type = "button" onclick = "generateRandomColor()" value = "Generate">
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <input type = "button" onclick = "generateRandomColor()" value = "Generate">
+        </div>
+        <div class="col-sm">
+            <canvas id="myCanvas" width=100 height=75 style="border:3px solid  #000000;">
+            </canvas>
+        </div>
+        <div class="col-sm">
+            <p id="randcolor"></p>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div><div class="col">
+    </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
 
 <script type = "text/javascript">
     function generateRandomColor() {
@@ -26,11 +58,8 @@
         ctx.fillRect(0, 0, 100, 75);
     }
 </script>
-<p></p>
-<p id="randcolor"></p>
 
-<canvas id="myCanvas" width=100 height=75 style="border:3px solid  #000000;">
-</canvas>
+
 
 <p>________________________________________________________________________________________________________</p>
 <br>
@@ -123,24 +152,85 @@
 
 <button onclick="blurfilter()">Blur</button>
 <button onclick="invertfilter()">Invert</button>
-<img src="static/assets/aliceCAT.jpg" id="myImg"  alt="Alice's cat Luca" width="200" height="200" />
-<img src="static/assets/aliceCAT2.jpg" id="myImg2"  alt="Alice's cat Apollo" width="200" height="200" />
-<img src="static/assets/aliceCAT3.jpg" id="myImg3"  alt="Alice's cat Apollo" width="200" height="200" />
-<img src="static/assets/aliceCAT4.jpg" id="myImg4"  alt="Alice's cats, Luca and Apollo" width="200" height="200" />
-<img src="static/assets/aliceCAT5.jpg" id="myImg5"  alt="Alice's cat Luca" width="200" height="200" />
-<br />
+<img src="static/assets/aliceCAT.jpg" id="myImg"  alt="Alice's cat Luca" width="100" height="100" />
+<img src="static/assets/aliceCAT2.jpg" id="myImg2"  alt="Alice's cat Apollo" width="100" height="100" />
+<img src="static/assets/aliceCAT3.jpg" id="myImg3"  alt="Alice's cat Apollo" width="100" height="100" />
+<img src="static/assets/aliceCAT4.jpg" id="myImg4"  alt="Alice's cats, Luca and Apollo" width="100" height="100" />
+<img src="static/assets/aliceCAT5.jpg" id="myImg5"  alt="Alice's cat Luca" width="100" height="100" />
 <br>
 <br>
-<br>
+
 <p>________________________________________________________________________________________________________</p>
 <br>
-<h3>RGB:</h3>
-<br>
-<body>
-<form>
-    <input type="range" name="amountRange" min="0" max="100" value="0" oninput="this.form.amountInput.value=this.value" />
-    <input type="number" name="amountInput" min="0" max="100" value="0" oninput="this.form.amountRange.value=this.value" />
-</form>
-</body>
+<h3>Logic Gates Lab:</h3>
 
-{% endblock %}
+<select id="gate">
+    <option value="d"> Please Select</option>
+    <option value="1">AND</option>
+    <option value="2">OR</option>
+    <option value="3">XOR</option>
+    <option value="4">NAND</option>
+    <option value="5">NOR</option>
+    <option value="6">XNOR</option>
+</select>
+
+<button id="v1" onclick="toggle('v1')">0</button>
+<button id="v2" onclick="toggle('v2')">0</button>
+<input id="result">
+
+<script>
+    function toggle(id) {  // Toggles 0 and 1
+        const element = document.getElementById(id);
+        if (element.innerHTML == 1) {
+            element.innerHTML = 0;
+        } else {
+            element.innerHTML = 1;
+        }
+        logic()
+    }
+
+    document.getElementById('gate').addEventListener('change', logic);
+    // document.getElementById('v1').addEventListener('change', logic);           these 2 not needed bc logic function is run when 01 buttons are toggled
+    // document.getElementById('v2').addEventListener('change', logic);
+
+    function logic() {
+        var Gate = document.getElementById('gate');
+        var V1 = document.getElementById('v1');
+        var V2 = document.getElementById('v2');
+
+        var gateValue = Gate.value !== 'd' ? parseInt(Gate.value) : undefined;
+        var v1Value = V1.innerHTML == 0 ? false : V1.innerHTML == 1 ? true : undefined;
+        var v2Value = V2.innerHTML == 0 ? false : V2.innerHTML == 1 ? true : undefined;
+
+        var result = 'Invalid result';
+
+        if (gateValue !== undefined && gateValue > 0 && gateValue < 7) {
+            switch (gateValue) {
+                case 1: //AND    both true
+                    result = (v1Value && v2Value) ? 'true' : 'false';
+                    break;
+                case 2: //OR     at least 1 true
+                    result = (v1Value || v2Value) ? 'true' : 'false';
+                    break;
+                case 3: //XOR    different
+                    result = ((v1Value && !v2Value) || (!v1Value && v2Value)) ? 'true' : 'false';
+                    break;
+                case 4: //NAND   cannot both true
+                    result = (!(v1Value && v2Value)) ? 'true' : 'false';
+                    break;
+                case 5: //NOR    cannot any true, 0 true
+                    result = (!(v1Value || v2Value)) ? 'true' : 'false';
+                    break;
+                case 6: //XNOR   same
+                    result = (v1Value == v2Value) ? 'true' : 'false';
+                    break;
+            }
+        }
+        document.getElementById('result').value = result;
+    }
+</script>
+<br>
+<br>
+<br>
+<br>
+    {% endblock %}
