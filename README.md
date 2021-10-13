@@ -27,6 +27,8 @@
 
 ### October 8
 
+[Week 7 Review Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/51)
+
 | Member | Work | Ticket |
 | - | - | - |
 | Anthony | Unsigned binary addition, binary logic gate | [Addition Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/44) and [Binary Logic Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/42)|
