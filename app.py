@@ -165,6 +165,14 @@ def sanvi():
     # starting and empty input default
     return render_template("individual/sanvi/sanvi.html", name="World")
 
+
+@app.route("/image/<path:image_link>")
+def image(image_link):
+    if "http" in image_link:
+        return render_template("image.html", image_link=image_link)
+    return render_template("image.html", image_link = "/" + image_link)
+
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)
 
