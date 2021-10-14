@@ -28,6 +28,7 @@
 ### October 8
 
 [Week 7 Review Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/51)
+<br />
 [Video](https://youtu.be/HzD0qHlWgi0)
 
 | Member | Work | Ticket |
