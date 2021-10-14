@@ -21,10 +21,14 @@
 
 {% block content %}
 
-<div class="row">
+<div class="row" style="height: 80%">
   <h1 style="text-align: center;" id="typewriter">W</h1>
 
-  <div class="col-sm-10 offset-sm-1 gallery container-fluid row center">
+  <div class="col-sm-1">
+      <p class="vertical-center">Button Placeholder</p>
+  </div>
+
+  <div class="col-sm-10 gallery container-fluid row center">
     {% for i in range(3) %}
     <div class="row container-fluid" id="gallery-row">
       {% for j in range(3) %}
@@ -34,6 +38,12 @@
       {% endfor %}
     </div>
     {% endfor %}
+  </div>
+
+  <div class="col-sm-1">
+    <div class="vertical-center">
+      <p>Button Placeholder</p>
+    </div>
   </div>
 </div>
 

@@ -52,7 +52,6 @@ h1 {
 
 .gallery {
     background-color: var(--galleryColor);
-    transform: translateY(5vh);
     height: 70vh;
 }
 
