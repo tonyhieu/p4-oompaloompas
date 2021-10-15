@@ -55,7 +55,6 @@ ul.dropdown-menu {
 
 .gallery {
     background-color: var(--galleryColor);
-    transform: translateY(5vh);
     height: 70vh;
 }
 
@@ -63,3 +62,11 @@ ul.dropdown-menu {
     display: flex;
     justify-content: center;
 }
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }

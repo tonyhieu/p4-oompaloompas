@@ -1,0 +1,257 @@
+{% extends "layouts/base.html" %}
+{% block meta %}
+
+<!-- Distinct styling for on/off -->
+<style>   
+
+.buttonOff {
+    background-color: black;
+    color: white;
+    font-style: normal;
+    height: 2em;
+    font-size: 4em;
+}
+
+.buttonOn {
+    background-color: white;
+    color: black;
+    font-style: italic;
+    height: 2em;
+    font-size: 4em;
+}
+
+.sumBit {  /* some other stylings for the sum bits, the table, and the multiply/divide buttons */
+    color: black;
+    height: 2em;
+    font-size: 4em;
+    border:3px; 
+    border-style: solid; 
+    border-color: black;
+    text-align: center; 
+    background-color: white;
+}
+
+.operatorButton {
+    background-color: rgb(207, 0, 253);
+    color: black;
+    font-style: normal;
+    height: 2em;
+    font-size: 4em;
+}
+
+table, th, td {
+    border:1px solid black;
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<!-- Creates all of the toggleable bits and two bytes. Also creates the sum byte at the bottom -->
+{% for j in range(3) %}
+
+{% if j == 0 %}
+<div class="row container-fluid">
+{% else %}
+<div class="row container-fluid mt-5">
+{% endif %}
+
+    {% if j == 2 %}
+
+    <div class="col-sm-1"></div>
+    {% for i in range(1, 10) %}
+    <p class="col-sm-1 sumBit" id="sumBit{{i}}">0</p>
+    {% endfor %}
+    <div class="col-sm"></div>
+
+    {% else %}
+
+    <button class="col-sm-1 operatorButton" onclick="changeRow('{{j}}', 'multiply')">x2</button>
+    <div class="col-sm-1"></div>
+    {% for i in range(1, 9) %}
+    <button class="col-sm-1" id="bit{{j}}{{i}}" onclick="toggleSwitch('bit{{j}}{{i}}')">0</button>
+    {% endfor %}
+    <button class="col-sm-1 offset-sm-1 operatorButton" onclick="changeRow('{{j}}', 'divide')">÷2</button>
+
+    {% endif %}
+</div>
+
+{% endfor %}
+
+<div class="center">
+    <!-- Table showing values -->
+    <table width="25%">
+        <tr>
+            <th>Row 1</th>
+            <th>Row 2</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td id="row1">0</td>
+            <td id="row2">0</td>
+            <td id="result">0</td>
+        </tr>
+    </table>
+</div>
+
+<div class="center mt-5">
+    <button class="operatorButton" onclick="reset()">Reset</button>
+</div>
+
+<script>
+
+function toggleSwitch (id) {     // toggles button between on and off, first bit toggles between signs
+    const element = document.getElementById(id);
+    if (element.innerHTML == "1") {
+        setBit(id, 0);
+    } else {
+        setBit(id, 1);
+    }
+
+    addRows();
+    
+}
+
+function reset () {   // function to reset all buttons back to off
+    for (var j = 0; j < 2; j++) {
+        for (var i = 1; i <= 8; i++) {
+            setBit("bit" + j + i, 0);
+        }
+    }
+
+    for (var i = 1; i <= 9; i++) {  // resets results too
+        const element = document.getElementById("sumBit" + i);
+        element.innerHTML = "0";
+    }
+
+    calculateAllRows();
+}
+
+function setBit(id, number) { // sets the bit directly
+    const element = document.getElementById(id);
+    if (number == 1) {
+        element.classList.add("buttonOn");
+        element.classList.remove("buttonOff");
+        element.innerHTML = "1";
+    } else {
+        element.classList.add("buttonOff");
+        element.classList.remove("buttonOn");
+        element.innerHTML = "0";
+    }
+}
+
+function changeRow (row, operator) { // function that multiplies/divides the row by 2
+    let bitArr = returnRow(row);
+    
+    if (operator == "divide") {
+        if (bitArr[7] == 1)
+            return; // check if last bit is 1 (if i divide that it wont be an integer)
+
+        for (var i = 7; i >= 1; i--) {
+            if (i == 1) {
+                bitArr[1] = 0; // edgecase for leftmost bit
+            } else {
+                bitArr[i] = bitArr[i-1]; // push every bit to the right
+            }
+        }
+    } else {
+        if (bitArr[1] == 1)
+            return; // check if first bit is 1 (if i multiply im gonna overflow)
+        for (var i = 1; i < 8; i++) {
+            if (i == 7) {
+                bitArr[7] = 0; // edgecase for rightmost bit
+            } else {
+                bitArr[i] = bitArr[i+1]; // push every bit to the left
+            }
+        }
+    }
+
+    for (var i = 1; i <= 8; i++) {  // set bits according to the new bitArr values
+        if (bitArr[i-1] == 1) {
+            setBit("bit" + row + i, 1);
+        } else {
+            setBit("bit" + row + i, 0);
+        }
+    }
+    addRows();
+}
+
+function returnRow (row) { // get all bits and put them into an array
+    const prefix = "bit" + row;
+    let bitArr = [];
+    for (var i = 1; i <= 8; i++) {
+        const element = document.getElementById(prefix + i);
+        bitArr.push(parseInt(element.innerHTML)); 
+    }
+    return bitArr;
+}
+
+function addRows () { // add the rows together (signed)
+    let bitArr1 = returnRow(0);
+    let bitArr2 = returnRow(1);
+    let row1Sum = calculateRow("bit0", 8);
+    let row2Sum = calculateRow("bit1", 8);
+    let sum = row1Sum + row2Sum;
+
+    let result = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    if (sum < 0) {
+        result[0] = 1;
+        sum = sum*-1;
+    }
+
+    for (var i = 8; i >= 1; i--) { //loops over last 7 bits
+        if (sum % 2)
+            result[i] = 1;
+        else
+            result[i] = 0;
+        sum = Math.floor(sum / 2);
+        if (!sum)
+            break;
+    }
+
+    for (var i = 1; i < 10; i++) {  // set sum bits
+        if (result[i-1] == 1) {
+            setBit("sumBit" + i, 1);
+        } else {
+            setBit("sumBit" + i, 0);
+        }
+    }
+
+    calculateAllRows();
+}
+
+function calculateRow (prefix, number) { // converts binary to decimal given a certain row
+    let sum = 0;
+    let element = document.getElementById(prefix + 1);
+    let sign = parseInt(element.innerHTML);
+    for (var i = 2; i <= number; i++) {
+        element = document.getElementById(prefix + i);
+        sum += Math.pow(2, number - i) * parseInt(element.innerHTML);
+    }
+    if (sign)
+        sum = sum*-1;
+    return sum;
+}
+
+function calculateAllRows () {  // calculates the decimal values of all rows using the calculateRow() function
+    let row1Sum = calculateRow("bit0", 8);
+    let row2Sum = calculateRow("bit1", 8);
+    let result = calculateRow("sumBit", 9);
+
+    const firstSum = document.getElementById("row1");
+    firstSum.innerHTML = row1Sum;
+
+    const secondSum = document.getElementById("row2");
+    secondSum.innerHTML = row2Sum;
+
+    const resultSum = document.getElementById("result");
+    resultSum.innerHTML = result;
+}
+
+window.onload = reset();  // init buttons
+
+</script>
+
+{% endblock %}

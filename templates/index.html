@@ -1,16 +1,50 @@
 {% extends "layouts/base.html" %}
+
+{% block meta %}
+
+<style>
+  .gallery-image {
+    transform: translateY(2vh);
+    transition: all .2s ease-in-out;
+  }
+
+  .gallery-image:hover {
+    transform: scale(1.1);
+  }
+
+  .gallery-row {
+    transform: translateX(1em);
+  }
+</style>
+
+{% endblock %}
+
 {% block content %}
 
-<div class="row">
+<div class="row" style="height: 80%">
   <h1 style="text-align: center;" id="typewriter">W</h1>
 
-  <div class="col-sm-10 offset-sm-1 gallery">
+  <div class="col-sm-1">
+      <p class="vertical-center">Button Placeholder</p>
   </div>
 
+  <div class="col-sm-10 gallery container-fluid row center">
+    {% for i in range(3) %}
+    <div class="row container-fluid" id="gallery-row">
+      {% for j in range(3) %}
+      <div class="col-sm-4 center">
+        <a href="/image/https://image.shutterstock.com/image-photo/wide-panorama-sunset-sky-clouds-260nw-731576737.jpg"><img src="https://image.shutterstock.com/image-photo/wide-panorama-sunset-sky-clouds-260nw-731576737.jpg" class="gallery-image" id="gallery-image{{j + (i%3)*3}}" style="object-fit:cover; object-position: right; width: auto; max-width: 23em; height:20vh;"/></a>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
 
-
-
-
+  <div class="col-sm-1">
+    <div class="vertical-center">
+      <p>Button Placeholder</p>
+    </div>
+  </div>
 </div>
 
 
