@@ -38,6 +38,9 @@ h1 {
     font-family: "Palatino, URW Palladio L, serif";
 }
 
+ul.dropdown-menu {
+    --navTextColor: var(--headerColor);
+}
 .content,
 .content a,
 .content a:hover {
