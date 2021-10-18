@@ -171,7 +171,7 @@ def picture():
 
 @app.route('/challenge')
 def challenge():
-    return render_template("templates/individual/Linda/challenges.html")
+    return render_template("individual/Linda/challenges.html")
 
 
 @app.route('/sanvi', methods=['GET', 'POST'])
