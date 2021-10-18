@@ -25,7 +25,9 @@
   <h1 style="text-align: center;" id="typewriter">W</h1>
 
   <div class="col-sm-1">
-      <p class="vertical-center">Button Placeholder</p>
+      <p class="vertical-center">
+        <button onclick="leftArrow()"><img src="/static/assets/images/leftarrow.png"></button>
+      </p>
   </div>
 
   <div class="col-sm-10 gallery container-fluid row center">
@@ -33,7 +35,7 @@
     <div class="row container-fluid" id="gallery-row">
       {% for j in range(3) %}
       <div class="col-sm-4 center">
-        <a href="/image/https://image.shutterstock.com/image-photo/wide-panorama-sunset-sky-clouds-260nw-731576737.jpg"><img src="https://image.shutterstock.com/image-photo/wide-panorama-sunset-sky-clouds-260nw-731576737.jpg" class="gallery-image" id="gallery-image{{j + (i%3)*3}}" style="object-fit:cover; object-position: right; width: auto; max-width: 23em; height:20vh;"/></a>
+        <a href="/image/https://image.shutterstock.com/image-photo/wide-panorama-sunset-sky-clouds-260nw-731576737.jpg" id="gallery-image-ref{{j + (i%3)*3}}"><img src="https://image.shutterstock.com/image-photo/wide-panorama-sunset-sky-clouds-260nw-731576737.jpg" class="gallery-image" id="gallery-image{{j + (i%3)*3}}" style="object-fit:cover; object-position: right; width: auto; max-width: 23em; height:20vh;"/></a>
       </div>
       {% endfor %}
     </div>
@@ -41,18 +43,24 @@
   </div>
 
   <div class="col-sm-1">
-    <div class="vertical-center">
-      <p>Button Placeholder</p>
-    </div>
+    <p class="vertical-center">
+      <button style="margin-left:25px;"onclick="rightArrow()"><img src="/static/assets/images/rightarrow.png"></button>
+    </p>
   </div>
 </div>
-
-
 
 
 <script>
 var i = 0;
 var speed = 50;
+const images = [
+  "https://image.shutterstock.com/image-photo/wide-panorama-sunset-sky-clouds-260nw-731576737.jpg",
+  "https://i.redd.it/j79d4w01vmn01.jpg",
+  "https://www.710beachrentals.com/wp-content/uploads/2017/02/La-Jolla-cove.jpg",
+  "https://a0.muscache.com/pictures/f870caa5-509e-4802-aa30-85dc27f358e0.jpg",
+  "https://theshoallajolla.com/latest/wp-content/uploads/2019/02/shutterstock_217914379.jpg"
+];
+let image = 0;
 
 function reset() {
     i = 0;
@@ -68,7 +76,38 @@ function typeWriter(id, text) {
 
 window.onload = function() {
     typeWriter("typewriter", "elcome to our website!");
-} 
+}
+
+function leftArrow() {
+  if (image == 0)
+    image = images.length - 1;
+  else
+    image--;
+  for (let m = 0; m < 3; m++) {
+    for (let n = 0; n < 3; n++) {
+      let o = n + (m%3)*3;
+      let image_id =  "gallery-image" + o;
+      let image_ref =  "gallery-image-ref" + o;
+      document.getElementById(image_id).src = images[image];
+      document.getElementById(image_ref).href = "/image/" + images[image];
+    }
+  }
+}
+
+function rightArrow() {
+  image++;
+  if (image == images.length)
+    image = 0;
+  for (let m = 0; m < 3; m++) {
+    for (let n = 0; n < 3; n++) {
+      let o = n + (m%3)*3;
+      let image_id =  "gallery-image" + o;
+      let image_ref =  "gallery-image-ref" + o;
+      document.getElementById(image_id).src = images[image];
+      document.getElementById(image_ref).href = "/image/" + images[image];
+    }
+  }
+}
 </script>
 
 {% endblock %}

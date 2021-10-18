@@ -225,12 +225,12 @@ function addRows () { // add the rows together (signed)
 function calculateRow (prefix, number) { // converts binary to decimal given a certain row
     let sum = 0;
     let element = document.getElementById(prefix + 1);
-    let sign = parseInt(element.innerHTML);
+    let sign = parseInt(element.innerHTML); //get sign
     for (var i = 2; i <= number; i++) {
         element = document.getElementById(prefix + i);
         sum += Math.pow(2, number - i) * parseInt(element.innerHTML);
     }
-    if (sign)
+    if (sign) //if 1 then set to negative
         sum = sum*-1;
     return sum;
 }
