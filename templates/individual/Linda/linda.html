@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% block content %}
 
-<center><h1>Linda Liu Individual Labs</h1>
+<h1>Linda Liu Individual Labs</h1>
 <p>Hello {{name}}, I am Linda Liu!</p>
 
 <form action="/linda" id="linda" method="POST" >
@@ -10,11 +10,11 @@
     <input type="submit" value="Go!">
 </form>
 
-</center>
+
 
 <br />
 
-<h2>The onclick Event</h2>
+<h2>The Onclick Event</h2>
 
 <p>Click the button!</p>
 
@@ -76,11 +76,14 @@
 
 
 <br />
+<br />
 
 <h2>Mini labs</h2>
 <ul>
-    <li><a href={{ url_for('quoteGen') }}>Quote Generator</a></li>
+    <li><a href={{ url_for('quoteGen') }}>Random Quote Generator</a></li>
     <li><a href={{ url_for('message') }}>Pass the Message</a></li>
+    <li><a href={{ url_for('picture') }}>Random Picture Generator</a></li>
+    <li><a href={{ url_for('challenge') }}>Extra Credit Challenge</a></li>
 </ul>
 
 

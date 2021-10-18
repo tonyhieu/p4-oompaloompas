@@ -12,6 +12,7 @@ app = Flask("app")
 def index():
     return render_template("index.html")
 
+
 @app.route("/about")
 def about():
     return render_template("about.html")
@@ -44,6 +45,7 @@ def bases():
 def binary_addition():
     return render_template("minilab/binary-addition.html")
 
+
 @app.route("/signed-binary-addition.html")
 def signed_binary_addition():
     return render_template("minilab/signed-binary-addition.html")
@@ -56,7 +58,7 @@ def binary():
             bits = request.form.get("bits")
 
             if request.form["picture_change"] == "Light Bulbs": # checks which button is pressed; if light bulbs button is pressed, light bulbs are the picture and vice versa
-                if len(bits) != 0:  
+                if len(bits) != 0:
                   return render_template("minilab/binary.html", bits=int(bits), image_path_on="/static/assets/bulb_on.gif", image_path_off="/static/assets/bulb_off.png")
             if request.form["picture_change"] == "Mortensen Bulbs":
                 if len(bits) != 0:  # input field has content
@@ -83,6 +85,7 @@ def anthony():
         return render_template("individual/anthony/anthony.html", summary=searchsummary)
     return render_template("individual/anthony/anthony.html")
 
+
 @app.route("/anthony/binary")
 def anthonyBinary():
     return render_template("individual/anthony/binary.html")
@@ -92,9 +95,11 @@ def anthonyBinary():
 def anthonyShapes():
     return render_template("individual/anthony/shapes.html")
 
+
 @app.route("/anthony/binary-logic")
 def anthonyBinaryLogic():
     return render_template("individual/anthony/binary-logic.html")
+
 
 @app.route("/nested-and-iteration", methods=['GET', 'POST'])
 def nested_and_iteration():
@@ -107,12 +112,12 @@ def nested_and_iteration():
             return render_template("minilab/tpt/nested-and-iteration.html", arr=create_array(size), ts=functions.findTs(size))
     return render_template("minilab/tpt/nested-and-iteration.html", arr=create_array(20), ts=functions.findTs(20))
 
+
 def create_array (size):
     arr = []
     for i in range(int(size)):
         arr.append(i)
     return arr
-
 
 
 @app.route("/ellen", methods=['GET', 'POST'])
@@ -148,13 +153,26 @@ def linda():
     # starting and empty input default
     return render_template("individual/Linda/linda.html", name="World")
 
+
 @app.route("/quoteGen")
 def quoteGen():
     return render_template("individual/Linda/quoteGen.html")
 
+
 @app.route("/message")
 def message():
     return render_template("individual/Linda/message.html")
+
+
+@app.route('/picture')
+def picture():
+    return render_template("individual/Linda/picGen.html")
+
+
+@app.route('/challenge')
+def challenge():
+    return render_template("templates/individual/Linda/challenges.html")
+
 
 @app.route('/sanvi', methods=['GET', 'POST'])
 def sanvi():
