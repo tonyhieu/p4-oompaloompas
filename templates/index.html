@@ -49,7 +49,7 @@
 
 
 <button onclick="greyfilter()">greyscale</button>
-
+<button onclick="invertfilter()">invert</button>
 <script>
   var imageGrey = 0;
   function greyfilter() {
@@ -75,6 +75,33 @@
       document.getElementById("gallery-image{{7}}").style.filter = "grayscale(0%)";
       document.getElementById("gallery-image{{8}}").style.filter = "grayscale(0%)";
       imageGrey = 0;
+    }
+  }
+
+  var imageInvert = 0;
+  function invertfilter() {
+    if (imageInvert == 0) {
+      document.getElementById("gallery-image{{0}}").style.filter = "invert(100%)";
+      document.getElementById("gallery-image{{1}}").style.filter = "invert(100%)";
+      document.getElementById("gallery-image{{2}}").style.filter = "invert(100%)";
+      document.getElementById("gallery-image{{3}}").style.filter = "invert(100%)";
+      document.getElementById("gallery-image{{4}}").style.filter = "invert(100%)";
+      document.getElementById("gallery-image{{5}}").style.filter = "invert(100%)";
+      document.getElementById("gallery-image{{6}}").style.filter = "invert(100%)";
+      document.getElementById("gallery-image{{7}}").style.filter = "invert(100%)";
+      document.getElementById("gallery-image{{8}}").style.filter = "invert(100%)";
+      imageInvert = 1;
+    } else {
+      document.getElementById("gallery-image{{0}}").style.filter = "invert(0%)";
+      document.getElementById("gallery-image{{1}}").style.filter = "invert(0%)";
+      document.getElementById("gallery-image{{2}}").style.filter = "invert(0%)";
+      document.getElementById("gallery-image{{3}}").style.filter = "invert(0%)";
+      document.getElementById("gallery-image{{4}}").style.filter = "invert(0%)";
+      document.getElementById("gallery-image{{5}}").style.filter = "invert(0%)";
+      document.getElementById("gallery-image{{6}}").style.filter = "invert(0%)";
+      document.getElementById("gallery-image{{7}}").style.filter = "invert(0%)";
+      document.getElementById("gallery-image{{8}}").style.filter = "invert(0%)";
+      imageInvert = 0;
     }
   }
 </script>
