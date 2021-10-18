@@ -24,6 +24,16 @@
 
 ## Grading
 
+### October 18
+| Member | Work | Ticket |
+| - | - | - |
+| Anthony | Unsigned binary addition, binary logic gate | [Addition Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/44) and [Binary Logic Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/42)|
+| Ellen | Logic gate lab | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/48) |
+| Linda | Base lab, converting decimal to base 2, 8, 64 | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/37) |
+| Alice | replicating Logic gate lab| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/48) |
+| Sanvi | Sliding Effect | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/commit/58988e154a8d8d4742d3b1321cd8a95b7e5039a3) |
+
+
 
 ### October 8
 
