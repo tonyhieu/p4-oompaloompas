@@ -48,6 +48,37 @@
 </div>
 
 
+<button onclick="greyfilter()">greyscale</button>
+
+<script>
+  var imageGrey = 0;
+  function greyfilter() {
+    if (imageGrey == 0) {
+      document.getElementById("gallery-image{{0}}").style.filter = "grayscale(100%)";
+      document.getElementById("gallery-image{{1}}").style.filter = "grayscale(100%)";
+      document.getElementById("gallery-image{{2}}").style.filter = "grayscale(100%)";
+      document.getElementById("gallery-image{{3}}").style.filter = "grayscale(100%)";
+      document.getElementById("gallery-image{{4}}").style.filter = "grayscale(100%)";
+      document.getElementById("gallery-image{{5}}").style.filter = "grayscale(100%)";
+      document.getElementById("gallery-image{{6}}").style.filter = "grayscale(100%)";
+      document.getElementById("gallery-image{{7}}").style.filter = "grayscale(100%)";
+      document.getElementById("gallery-image{{8}}").style.filter = "grayscale(100%)";
+      imageGrey = 1;
+    } else {
+      document.getElementById("gallery-image{{0}}").style.filter = "grayscale(0%)";
+      document.getElementById("gallery-image{{1}}").style.filter = "grayscale(0%)";
+      document.getElementById("gallery-image{{2}}").style.filter = "grayscale(0%)";
+      document.getElementById("gallery-image{{3}}").style.filter = "grayscale(0%)";
+      document.getElementById("gallery-image{{4}}").style.filter = "grayscale(0%)";
+      document.getElementById("gallery-image{{5}}").style.filter = "grayscale(0%)";
+      document.getElementById("gallery-image{{6}}").style.filter = "grayscale(0%)";
+      document.getElementById("gallery-image{{7}}").style.filter = "grayscale(0%)";
+      document.getElementById("gallery-image{{8}}").style.filter = "grayscale(0%)";
+      imageGrey = 0;
+    }
+  }
+</script>
+
 
 
 <script>
