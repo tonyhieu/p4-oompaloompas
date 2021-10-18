@@ -27,8 +27,8 @@
 ### October 18
 | Member | Work | Ticket |
 | - | - | - |
-| Anthony | Unsigned binary addition, binary logic gate | [Addition Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/44) and [Binary Logic Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/42)|
-| Ellen | Logic gate lab | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/48) |
+| Anthony | Creating initial photo gallery | [Photo gallery ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/38) and [functionality ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/53)|
+| Ellen | Shadows to gallery, palette | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/59) |
 | Linda | Random Picture Generator | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/57) |
 | Alice | image manipulation in gallery| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/58) |
 | Sanvi | Sliding Effect | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/commit/58988e154a8d8d4742d3b1321cd8a95b7e5039a3) |
