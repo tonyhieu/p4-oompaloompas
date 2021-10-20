@@ -1,4 +1,4 @@
 /.idea
 /.vscode
 /venv
-/algorithms/__pycache__
+__pycache__
