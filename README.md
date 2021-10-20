@@ -33,6 +33,7 @@
 | Alice | image manipulation in gallery| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/58) | 7.5/8 |
 | Sanvi | Sliding Effect | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/commit/58988e154a8d8d4742d3b1321cd8a95b7e5039a3) | 8/8 |
 
+33 comments, seems like everyone in class left one
 
 
 ### October 8
