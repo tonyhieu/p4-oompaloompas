@@ -5,13 +5,25 @@
     <title>Random Picture Generator</title>
 </head>
 <body>
-<h1>Random Picture Generator</h1>
+<center>
+    <br/>
+
+<h1 style="color:#e0e1dd;">Random Picture Generator</h1>
 
 
-<img id="pictureDisplay" class="pictures" alt="" width="700" height="auto" src="/static/assets/pictures/{{files}}">
 <button onclick="newPicture()"> New Picture</button>
 
+<br/>
+    <br/>
+    <br/>
+    <br/>
+
+<img id="pictureDisplay" class="pictures" alt="" width="auto" height="500" src="/static/assets/pictures/{{files}}">
+
+    <script>document.body.style.backgroundColor =
+        "#0b1d2a"; </script>
 
 <script src="../../../static/js/picGen.js"></script>
+</center>
 </body>
 </html>
