@@ -3,9 +3,10 @@ import wikipedia
 from algorithms.image import image_data
 from PIL import Image, ImageDraw, ImageFont
 from ctypes import *
+from api.imageapi import api_bp
 
 
-app = Flask("app")
+app = Flask(__name__)
 
 
 @app.route("/")
@@ -190,6 +191,7 @@ def image(image_link):
         return render_template("image.html", image_link=image_link)
     return render_template("image.html", image_link = "/" + image_link)
 
+app.register_blueprint(api_bp)
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080)
