@@ -9,46 +9,6 @@
 </form>
 
 
-
-<br />
-
-<h2>The Onclick Event</h2>
-
-<p>Click the button!</p>
-
-<button onclick="Function()">Click me</button>
-
-<p id="demo"></p>
-
-<script>
-    function Function() {
-        document.getElementById("demo").innerHTML = "Hiiiii Have a wonderful rest of your day! :)";
-    }
-</script>
-
-
-<br />
-
-
-<p>Click the button to display the time.</p>
-
-<button onclick="getElementById('demo2').innerHTML=Date()">What is the time?</button>
-
-<p id="demo2"></p>
-
-
-<br />
-
-
-<p onclick="myFunction(this, 'blue')">Click me to change my text color.</p>
-
-<script>
-    function myFunction(elmnt,clr) {
-        elmnt.style.color = clr;
-    }
-</script>
-
-
 <br />
 
 
@@ -78,6 +38,7 @@
 
 <h2>Mini labs</h2>
 <ul>
+    <li><a href={{ url_for('onclick') }}>The Onclick Events</a></li>
     <li><a href={{ url_for('quoteGen') }}>Random Quote Generator</a></li>
     <li><a href={{ url_for('message') }}>Pass the Message</a></li>
     <li><a href={{ url_for('picture') }}>Random Picture Generator</a></li>

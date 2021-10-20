@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Onclick Events</title>
+</head>
+<body>
+
+<h1>The Onclick Events</h1>
+
+<p>Click the button!</p>
+
+<button onclick="Function()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+    function Function() {
+        document.getElementById("demo").innerHTML = "Hiiiii Have a wonderful rest of your day! :)";
+    }
+</script>
+
+
+<br />
+
+
+<p>Click the button to display the time.</p>
+
+<button onclick="getElementById('demo2').innerHTML=Date()">What is the time?</button>
+
+<p id="demo2"></p>
+
+
+<br />
+
+
+<p onclick="myFunction(this, 'blue')">Click me to change my text color.</p>
+
+<script>
+    function myFunction(elmnt,clr) {
+        elmnt.style.color = clr;
+    }
+</script>
+
+    <br />
+        
+    <title>
+        Change the Background Color
+    </title>
+    <script>
+        /* script to set background color */
+        function geeks() {
+            document.body.style.backgroundColor =
+                "#778da9";
+        }
+    </script>
+
+
+    <h2>
+        Change the Background Color
+    </h2>
+
+    <button type="button" onclick="geeks()">
+        Submit
+    </button>
+
+
+</body>
+</html>

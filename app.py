@@ -174,6 +174,10 @@ def picture():
 def challenge():
     return render_template("individual/Linda/challenges.html")
 
+@app.route('/onclick')
+def onclick():
+    return render_template("individual/Linda/onclick.html")
+
 
 @app.route('/sanvi', methods=['GET', 'POST'])
 def sanvi():
