@@ -161,7 +161,7 @@
                             fday = `<div class="forecast-day">
 						<p>${dayname}</p>
 						<p><span class="ico-${icon}" title="${icon}"></span></p>
-						<div class="forecast-day--temp">${temp}<sup>°C</sup></div>
+						<div class="forecast-day--temp">${temp*9/5+32}<sup>°F</sup></div>
 					</div>`;
                             forecastEl[0].insertAdjacentHTML('beforeend', fday);
                         }
