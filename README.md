@@ -29,7 +29,7 @@
 | Member | Video | Ticket | Grade |
 | - | - | - | - |
 | Anthony | Creating initial photo gallery | [Photo gallery ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/38) and [functionality ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/53)| 8/8 |
-| Ellen | [Video](https://drive.google.com/file/d/1OUw365Uv2u3rKtXfx7dsPjyhP3c03wj4/view?usp=sharing) | [Ticket]() |  |
+| Ellen | [Video](https://drive.google.com/file/d/1OUw365Uv2u3rKtXfx7dsPjyhP3c03wj4/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/63) |  |
 | Linda | Random Picture Generator | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/57) | 7.5/8 |
 | Alice | image manipulation in gallery| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/58) | 7.5/8 |
 | Sanvi | Sliding Effect | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/commit/58988e154a8d8d4742d3b1321cd8a95b7e5039a3) | 8/8 |
