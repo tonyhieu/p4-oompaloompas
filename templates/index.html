@@ -187,16 +187,17 @@ function rightArrow() {
 
 <button onclick="greyfilter()">Greyscale</button>
 <button onclick="invertfilter()">Invert</button>
-<p id = "displayValue"> </p>
+<!--<p id = "displayValue"> </p>-->
 <script>
   var imageGrey = 0;
   function greyfilter() {
     if (imageGrey == 0) {
       for (let r=0; r < 9; r++) {
-          myimageid = "gallery-image"+ r;
-          //document.getElementById('displayValue').innerHTML = r +"," + myimageid;
-          //alert(pictureID+","+myimageid)
-          document.getElementById(myimageid).style.filter = "grayscale(100%)";
+        myimageid = "gallery-image"+ r;
+        //document.getElementById('displayValue').innerHTML = r +"," + myimageid;
+        //alert(pictureID+","+myimageid)
+        //
+        document.getElementById(myimageid).style.filter = "grayscale(100%)";
       }
       imageGrey = 1;
     } else {
