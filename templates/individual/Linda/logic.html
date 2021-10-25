@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logic Gates Lab</title>
+</head>
+
+<style>
+    table{
+        width: 100%;
+    }
+    table, th, td {
+        border: 2px solid white;
+        height:46px;
+        border-collapse: collapse;
+        color: white;
+    }
+    body{
+        background: #0b1d2a;
+    }
+    color: white;
+
+</style>
+<body>
+<center>
+<h1 style="color:white;">Logic Gates Lab</h1>
+<div class="bitwise-buttons" style="color: white;margin-top: 15px;margin-left:20px;">
+    <div>Click buttons to change 0 or 1</div>
+    <br/>
+    <button type="button" id="a" onclick="changeInput('a');">0</button>
+    <button type="button" id="b" onclick="changeInput('b');">0</button>
+</div>
+<div class="bitwise-options" style="margin-top: 15px;margin-left:20px;">
+    <table>
+
+        <tr>
+            <th style="width: 50%;">Logic Gates</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>AND</td>
+            <td id="and">---</td>
+        </tr>
+        <tr>
+            <td>NAND</td>
+            <td id="nand">---</td>
+        </tr>
+        <tr>
+            <td>OR</td>
+            <td id="or">---</td>
+        </tr>
+        <tr>
+            <td>NOR</td>
+            <td id="nor">---</td>
+        </tr>
+        <tr>
+            <td>XOR</td>
+            <td id="xor">---</td>
+        </tr>
+        <tr>
+            <td>XNOR</td>
+            <td id="xnor">---</td>
+        </tr>
+    </table>
+</div>
+
+</center>
+
+<script src="../../../static/js/logic.js"></script>
+</body>
+</html>

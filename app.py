@@ -178,6 +178,9 @@ def challenge():
 def onclick():
     return render_template("individual/Linda/onclick.html")
 
+@app.route('/lindalogic')
+def lindalogic():
+    return render_template("individual/Linda/logic.html")
 
 @app.route('/sanvi', methods=['GET', 'POST'])
 def sanvi():
