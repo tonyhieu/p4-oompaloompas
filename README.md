@@ -32,7 +32,7 @@
 | Ellen | [Video](https://drive.google.com/file/d/1OUw365Uv2u3rKtXfx7dsPjyhP3c03wj4/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/63) |  |
 | Linda | [Video](https://drive.google.com/file/d/135DzVZgvTSEfSWDVXkDrSjd8qpa3xi2X/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/64) |  |
 | Alice | [Video](https://drive.google.com/file/d/11-0T8_guhfHA9cAMfD_ALp4UG1qWZFE6/view?usp=sharing)| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/66) |  |
-| Sanvi | Sliding Effect | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/commit/58988e154a8d8d4742d3b1321cd8a95b7e5039a3) | 8/8 |
+| Sanvi | [Video](https://www.youtube.com/watch?v=asYRLdzlhJA) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/67) | 8/8 |
 
 ### October 18
 | Member | Work | Ticket | Grade |
