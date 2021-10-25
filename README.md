@@ -24,6 +24,16 @@
 
 ## Grading
 
+### Individual Final Video
+
+| Member | Video | Ticket | Grade |
+| - | - | - | - |
+| Anthony | [Video](https://youtu.be/CMGlGF0Zlpc) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/65) | N/A |
+| Ellen | [Video](https://drive.google.com/file/d/1OUw365Uv2u3rKtXfx7dsPjyhP3c03wj4/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/63) |  |
+| Linda | [Video](https://drive.google.com/file/d/135DzVZgvTSEfSWDVXkDrSjd8qpa3xi2X/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/64) |  |
+| Alice | image manipulation in gallery| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/58) | 7.5/8 |
+| Sanvi | Sliding Effect | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/commit/58988e154a8d8d4742d3b1321cd8a95b7e5039a3) | 8/8 |
+
 ### October 18
 | Member | Work | Ticket | Grade |
 | - | - | - | - |
