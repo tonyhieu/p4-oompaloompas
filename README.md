@@ -28,7 +28,7 @@
 
 | Member | Video | Ticket | Grade |
 | - | - | - | - |
-| Anthony | Creating initial photo gallery | [Photo gallery ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/38) and [functionality ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/53)| 8/8 |
+| Anthony | [Video](https://youtu.be/CMGlGF0Zlpc) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/65) | N/A |
 | Ellen | [Video](https://drive.google.com/file/d/1OUw365Uv2u3rKtXfx7dsPjyhP3c03wj4/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/63) |  |
 | Linda | [Video](https://drive.google.com/file/d/135DzVZgvTSEfSWDVXkDrSjd8qpa3xi2X/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/64) |  |
 | Alice | image manipulation in gallery| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/58) | 7.5/8 |
