@@ -28,11 +28,11 @@
 
 | Member | Video | Ticket | Grade |
 | - | - | - | - |
-| Anthony | [Video](https://youtu.be/CMGlGF0Zlpc) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/65) | N/A |
-| Ellen | [Video](https://drive.google.com/file/d/1OUw365Uv2u3rKtXfx7dsPjyhP3c03wj4/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/63) |  |
-| Linda | [Video](https://drive.google.com/file/d/135DzVZgvTSEfSWDVXkDrSjd8qpa3xi2X/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/64) |  |
-| Alice | [Video](https://drive.google.com/file/d/11-0T8_guhfHA9cAMfD_ALp4UG1qWZFE6/view?usp=sharing)| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/66) |  |
-| Sanvi | [Video](https://www.youtube.com/watch?v=asYRLdzlhJA) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/67) | 8/8 |
+| Anthony | [Video](https://youtu.be/CMGlGF0Zlpc) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/65) | 5.5/6 |
+| Ellen | [Video](https://drive.google.com/file/d/1OUw365Uv2u3rKtXfx7dsPjyhP3c03wj4/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/63) | 5.5/6 |
+| Linda | [Video](https://drive.google.com/file/d/135DzVZgvTSEfSWDVXkDrSjd8qpa3xi2X/view?usp=sharing) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/64) | 5.75/6 |
+| Alice | [Video](https://drive.google.com/file/d/11-0T8_guhfHA9cAMfD_ALp4UG1qWZFE6/view?usp=sharing)| [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/66) | 5.75/6 |
+| Sanvi | [Video](https://www.youtube.com/watch?v=asYRLdzlhJA) | [Ticket](https://github.com/tonyhieu/p4-oompaloompas/issues/67) | 5.75/6 |
 
 ### October 18
 | Member | Work | Ticket | Grade |
