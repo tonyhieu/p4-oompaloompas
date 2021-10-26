@@ -15,3 +15,68 @@ function newQuote() {
     var randomNumber = Math.floor(Math.random() * (quotes.length));
     document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
 }
+
+
+function find_twos_and_eights(){
+    let num = document.getElementById('find-two-or-eight').value;
+    let result = 0;
+    for (let i = 0; i < num; i++){
+        //check if i is an even number: if i divided by 2 gives me 0, i is an even number; if not, odd number.
+        if(i % 2 !== 0) {
+            //if not an even number, skip the following code
+            continue
+        }
+        //check if i contains 2 or 8
+        if(String(i).includes('2') || String(i).includes('8')){
+            result=result+1;
+        }
+    }
+    document.getElementById('result-for-find-two-or-right').innerHTML = "The result is :" + result;
+    return result;
+}
+
+const msg_list = document.getElementById("send-messages");
+const msg_input = document.getElementById("message-input");
+const no_msg = document.getElementById("no-msg");
+
+function sendMessage() {
+    //console.log(msg_input.value);
+    linode = document.createElement("li");
+    textNode = document.createTextNode(msg_input.value);
+
+    linode.appendChild(textNode);
+    //console.log(linode);
+    msg_list.appendChild(linode);
+
+    // clear the input
+    msg_input.value = "";
+
+    msg_list.removeChild(no_msg);
+}
+
+
+function changeInput(btn){
+    var current = document.getElementById(btn).textContent;
+    if (current === '0'){
+        current = '1'
+    }else{
+        current = '0'
+    }
+    document.getElementById(btn).textContent = current
+    //display result
+    const a = parseInt(document.getElementById('a').textContent);
+    const b = parseInt(document.getElementById('b').textContent);
+    const and = a & b;
+    //inline if condition, syntax rule
+    //and === 0 => true/false, ? => if, : => else
+    document.getElementById('and').textContent = and === 0 ? "False" : "True";
+    document.getElementById('nand').textContent = and === 0 ? "True" : "False";
+    const or = a | b;
+    document.getElementById('or').textContent = or === 0 ? "False" : "True";
+    document.getElementById('nor').textContent = or === 0 ? "True" : "False";
+    const xor = a ^ b;
+    document.getElementById('xor').textContent = xor === 0 ? "False" : "True";
+    document.getElementById('xnor').textContent = xor === 0 ? "True" : "False";
+}
+
+
