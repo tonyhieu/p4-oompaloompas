@@ -171,8 +171,20 @@
 <button id="v1" onclick="toggle('v1')">0</button>
 <button id="v2" onclick="toggle('v2')">0</button>
 <input id="result">
+<input id="note">
 
 <script>
+
+    var list = ["", "AND", "OR", "XOR", "NAND", "NOR", "XNOR"]; // index by 0, 1, 2, ...
+    var dict = { // key:value pair
+        "AND" : "True: 11",          // "both true to be true"
+        "OR"  : "True: 01, 10, 11",  // "at least one true to be true",
+        "XOR" : "True: 01, 10",      // "different to be true",
+        "NAND": "True: 00, 01, 10",  // "not and - cannot both be true"
+        "NOR" : "True: 00",          // "not or - all false to be true"
+        "XNOR" : "True: 00, 11",     // "not xor - same to be true"
+    };
+
     function toggle(id) {  // Toggles 0 and 1
         const element = document.getElementById(id);
         if (element.innerHTML == 1) {
@@ -221,6 +233,9 @@
             }
         }
         document.getElementById('result').value = result;
+        logicname = list[Gate.value];  //use Gate.value as index to access values in List
+        //use logic name as key to access values in dictionary, concatenated string
+        document.getElementById('note').value = logicname + " -    "+dict[logicname];
     }
 </script>
 <br>
