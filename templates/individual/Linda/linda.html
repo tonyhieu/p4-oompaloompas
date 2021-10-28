@@ -1,11 +1,11 @@
 
 <h1>Linda Liu Individual Labs</h1>
-<p>Hello {{name}}, I am Linda Liu!</p>
+<p>Hello <span id="myName">{{name}}</span>, I am Linda Liu!</p>
 
-<form action="/linda" id="linda" method="POST" >
+<form action="#" id="linda" method="POST" >
     <label for="name">Enter Your Name</label>
     <input name="name" id="name">
-    <input type="submit" value="Go!">
+    <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
 </form>
 
 
@@ -19,7 +19,9 @@
     /* script to set background color */
     function geeks() {
         document.body.style.backgroundColor =
-            "#778da9";
+            "#0b1d2a";
+        document.body.style.color =
+            "white" ;
     }
 </script>
 

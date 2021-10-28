@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <title>Random Picture Generator</title>
 </head>
+<style>
+    #board {
+        text-decoration: none;
+        color: #000;
+        background: black;
+        display: block;
+        height: 500px;
+        width: 800px;
+        padding: 1em;
+        margin: 1em;
+        justify-content: center;
+    }
+    .pictures{
+        width: auto;
+        height: 500px;
+    }
+</style>
 <body>
 <center>
+    <br/>
     <br/>
 
 <h1 style="color:#e0e1dd;">Random Picture Generator</h1>
@@ -16,9 +34,10 @@
 <br/>
     <br/>
     <br/>
-    <br/>
 
-<img id="pictureDisplay" class="pictures" alt="" width="auto" height="500" src="/static/assets/pictures/{{files}}">
+<div id="board">
+<img id="pictureDisplay" class="pictures" alt=""  src="/static/assets/pictures/{{files}}">
+    </div>
 
     <script>document.body.style.backgroundColor =
         "#0b1d2a"; </script>

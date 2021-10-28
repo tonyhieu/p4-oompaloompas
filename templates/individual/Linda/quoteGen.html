@@ -3,13 +3,37 @@
 <head>
     <title>Quote Generator</title>
 </head>
+<style>
+    #quoteDisplay {
+        text-decoration: none;
+        color: #000;
+        background: #ffc;
+        display: block;
+        height: 16em;
+        width: 29em;
+        padding: 1em;
+        margin: 1em;
+        font-size: x-large;
+
+    }
+</style>
 <body>
+<center>
 <h1>Simple Quote Generator</h1>
-<div id="quoteDisplay">
+    <button onclick="newQuote()"> New Quote</button>
+    <br/>
+    <br/>
+    <div id="quoteDisplay">
     <!-- Quotes will display here -->
 </div>
-<button onclick="newQuote()"> New Quote</button>
+
+    <script>document.body.style.backgroundColor =
+        "#0b1d2a";
+    document.body.style.color =
+        "white" ;
+    </script>
 
 <script src="../../../static/js/lindaJs.js"></script>
+</center>
 </body>
 </html>

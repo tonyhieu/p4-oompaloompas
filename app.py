@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import wikipedia
+import wikipedia, requests
 from algorithms.image import image_data
 from PIL import Image, ImageDraw, ImageFont
 from ctypes import *
@@ -11,7 +11,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    url = "http://127.0.0.1:8080/api/images"
+    response = requests.request("GET", url)
+    return render_template("index.html", images=response.json())
 
 
 @app.route("/about")
@@ -192,11 +194,16 @@ def sanvi():
     return render_template("individual/sanvi/sanvi.html", name="World")
 
 
-@app.route("/image/<path:image_link>")
-def image(image_link):
-    if "http" in image_link:
-        return render_template("image.html", image_link=image_link)
-    return render_template("image.html", image_link = "/" + image_link)
+@app.route("/image/<id>")
+def image(id):
+    url = "http://127.0.0.1:8080/api/images/" + id
+    response = requests.request("GET", url)
+    try:
+        image_data = response.json()
+        print(image_data)
+        return render_template("image.html", image=image_data)
+    except:
+        return "Invalid ID"
 
 app.register_blueprint(api_bp)
 
