@@ -11,7 +11,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    url = "http://127.0.0.1:8080/api/images"
+    url = "http://oompaloompas.nighthawkcodingsociety.com/api/images"
+    print(url)
     response = requests.request("GET", url)
     return render_template("index.html", images=response.json())
 
@@ -214,7 +215,7 @@ def sanvi():
 
 @app.route("/image/<id>")
 def image(id):
-    url = "http://127.0.0.1:8080/api/images/" + id
+    url = "http://oompaloompas.nighthawkcodingsociety.com/api/images/" + id
     response = requests.request("GET", url)
     try:
         image_data = response.json()
