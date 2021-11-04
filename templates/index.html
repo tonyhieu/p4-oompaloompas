@@ -215,11 +215,74 @@ $( document ).ready(function() {
 
 </script>
 
-<button onclick="greyfilter()">Greyscale</button>
+<!--<button onclick="greyfilter()">Greyscale</button>-->
 <button onclick="invertfilter()">Invert</button>
+<button onclick="blurfilter()">Blur</button>
 <!--<p id = "displayValue"> </p>-->
+
+
+<style>
+  .rangeslider{
+    width: 50%;
+  }
+  .myslider {
+    -webkit-appearance: none;
+    background: #FCF3CF  ;
+    width: 50%;
+    height: 20px;
+    opacity: 2;
+  }
+  .myslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: #34495E  ;
+    width: 5%;
+    height: 20px;
+  }
+  .myslider:hover {
+    opacity: 1;
+  }
+</style>
+</br>
+<p> Greyscale</p>
+<div class="rangeslider">
+  <input type="range" min="0" max="100" value="0"
+         class="myslider" id="sliderRange">
+  <p>Value: <span id="demo"></span></p>
+</div>
+
 <script>
-  var imageGrey = 0;
+  var rangeslider = document.getElementById("sliderRange");
+  var output = document.getElementById("demo");
+  rangeslider.oninput = function() {
+    output.innerHTML = this.value;
+    var sliderVal = this.value;
+    var grayFilter="grayscale("+sliderVal+"%)";
+    for (let r=0; r < 45; r++) {
+      myimageid = "gallery-image"+ r;
+      document.getElementById(myimageid).style.filter = grayFilter;
+    }
+  }
+
+  var imageBlur = 0;
+  function blurfilter() {
+    if (imageBlur == 0) {
+      for (let r=0; r < 45; r++) {
+        myimageid = "gallery-image"+ r;
+        document.getElementById(myimageid).style.filter = "blur(2px)";
+      }
+      imageBlur = 1;
+    } else {
+      for (let r=0; r < 45; r++) {
+        myimageid = "gallery-image"+ r;
+        document.getElementById(myimageid).style.filter = "blur(0px)";
+      }
+      imageBlur = 0;
+    }
+  }
+
+
+  /*var imageGrey = 0;
   function greyfilter() {
     if (imageGrey == 0) {
       for (let i = 0; i < 45; i++) {
@@ -233,7 +296,7 @@ $( document ).ready(function() {
       }
       imageGrey = 0;
     }
-  }
+  }*/
 
   var imageInvert = 0;
   function invertfilter() {
