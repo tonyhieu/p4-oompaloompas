@@ -11,7 +11,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    url = "http://127.0.0.1:8080/api/images"
+    url = "http://oompaloompas.nighthawkcodingsociety.com/api/images"
+    print(url)
     response = requests.request("GET", url)
     return render_template("index.html", images=response.json())
 
@@ -184,6 +185,24 @@ def onclick():
 def lindalogic():
     return render_template("individual/Linda/logic.html")
 
+
+@app.route("/lindaBinary", methods=['GET','POST'])
+def lindaBinary():
+    if request.form:
+        try:
+            bits = request.form.get("bits")
+
+            if request.form["picture_change"] == "Light Bulbs": # checks which button is pressed; if light bulbs button is pressed, light bulbs are the picture and vice versa
+                return render_template("individual/Linda/lindaBinary.html", bits=int(bits), image_path_on="/static/assets/bulb_on.gif", image_path_off="/static/assets/bulb_off.png")
+            if request.form["picture_change"] == "Switch":
+                return render_template("individual/Linda/lindaBinary.html", bits=int(bits), image_path_on="/static/assets/pictures/on.png", image_path_off="/static/assets/pictures/off.png")
+
+            # starting and empty input default
+        except:
+            return render_template("individual/Linda/lindaBinary.html", bits=8, image_path_on="/static/assets/pictures/on.png", image_path_off="/static/assets/pictures/off.png")
+    return render_template("individual/Linda/lindaBinary.html", bits=8, image_path_on="/static/assets/bulb_on.gif", image_path_off="/static/assets/bulb_off.png")
+
+
 @app.route('/sanvi', methods=['GET', 'POST'])
 def sanvi():
     if request.form:
@@ -196,7 +215,7 @@ def sanvi():
 
 @app.route("/image/<id>")
 def image(id):
-    url = "http://127.0.0.1:8080/api/images/" + id
+    url = "http://oompaloompas.nighthawkcodingsociety.com/api/images/" + id
     response = requests.request("GET", url)
     try:
         image_data = response.json()
