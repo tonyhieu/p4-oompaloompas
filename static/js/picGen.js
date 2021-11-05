@@ -8,7 +8,7 @@ var pictures = [
     "lindaPic7.JPG",
     "lindaPic8.JPG",
     "lindaPic9.JPG",
-    "lindaPic10.jpg"
+    "Elvis.jpg"
 ]
 
 function newPicture() {
@@ -21,3 +21,22 @@ function newPicture() {
     var randomNumber = Math.floor(randomSeed);
     document.getElementById('pictureDisplay').src = "/static/assets/pictures/" + pictures[randomNumber];
 }
+
+// mouse over effects
+$(document).on({
+    mouseenter: function () {
+        //stuff to do on mouse enter
+        var name =  document.getElementById('pictureDisplay').src;
+        if (name.toLowerCase().includes("linda")){
+            document.getElementById('author').innerHTML = "Present by: Linda Liu"
+        }
+        else if (name.toLowerCase().includes("elvis")){
+            document.getElementById('author').innerHTML = "Present by: Elvis Tang"
+        }
+
+    },
+    mouseleave: function () {
+        //stuff to do on mouse leave
+        document.getElementById('author').innerHTML = ""
+    }
+}, "#pictureDisplay"); //pass the element as an argument to .on

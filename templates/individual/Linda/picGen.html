@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Random Picture Generator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
     #board {
@@ -20,23 +21,28 @@
         width: auto;
         height: 500px;
     }
+    #author{
+        font-size: 30px;
+        color: #e0e1dd;
+    }
 </style>
 <body>
 <center>
-    <br/>
-    <br/>
 
-<h1 style="color:#e0e1dd;">Random Picture Generator</h1>
 
+<h1 style="font-size:45px; color:#e0e1dd;">Random Picture Generator</h1>
 
 <button onclick="newPicture()"> New Picture</button>
 
 <br/>
-    <br/>
-    <br/>
+
 
 <div id="board">
 <img id="pictureDisplay" class="pictures" alt=""  src="/static/assets/pictures/{{files}}">
+</div>
+
+    <div id="author">
+
     </div>
 
     <script>document.body.style.backgroundColor =
