@@ -22,6 +22,18 @@ function newPicture() {
     document.getElementById('pictureDisplay').src = "/static/assets/pictures/" + pictures[randomNumber];
 }
 
+function grayIt(){
+    if($('#pictureDisplay').hasClass("blur")) $('#pictureDisplay').removeClass('blur');
+    if($('#pictureDisplay').hasClass("grayscale")) $('#pictureDisplay').removeClass('grayscale');
+    else $('#pictureDisplay').addClass('grayscale');
+}
+
+function blurIt(){
+    if($('#pictureDisplay').hasClass("grayscale")) $('#pictureDisplay').removeClass('grayscale');
+    if($('#pictureDisplay').hasClass("blur")) $('#pictureDisplay').removeClass('blur');
+    else $('#pictureDisplay').addClass('blur');
+}
+
 // mouse over effects
 $(document).on({
     mouseenter: function () {

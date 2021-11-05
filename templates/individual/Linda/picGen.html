@@ -25,6 +25,15 @@
         font-size: 30px;
         color: #e0e1dd;
     }
+    .grayscale{
+        filter: grayscale(100%);
+    }
+    .blur{
+        filter: blur(2px);
+    }
+    .btn-group{
+        margin-right: 5px;
+    }
 </style>
 <body>
 <center>
@@ -32,7 +41,10 @@
 
 <h1 style="font-size:45px; color:#e0e1dd;">Random Picture Generator</h1>
 
-<button onclick="newPicture()"> New Picture</button>
+
+<button onclick="newPicture()" class="btn-group" style="margin-right: 30px;"> New Picture</button>
+    <button onclick="grayIt()" class="btn-group"> Grayscale</button>
+    <button onclick="blurIt()" class="btn-group"> Blur it</button>
 
 <br/>
 
