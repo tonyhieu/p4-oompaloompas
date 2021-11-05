@@ -1,5 +1,10 @@
 # Period 4 Oompa Loompas
 
+Hi! We are the Oompa Loompas, and we wanted to create a photo gallery where users could access and look at pictures. On our site, we have a working photo gallery that can display many pictures as well as functions to change how those pictures look. Check out the official runtime link [here!](https://oompaloompas.nighthawkcodingsociety.com)
+
+## How to run
+
+Either clone our repository or download a zip folder of it. 
 
 ## Contributors
 
