@@ -37,6 +37,13 @@ Either clone our repository or download a zip folder of it.
 [Anthony and Sanvi's Journal](https://docs.google.com/document/d/1UPQxYudsGg_CQ7wcLBHzOEVOC-G-4lH2g79Qe2gOj3A/edit?usp=sharing)
 <br />
 [Linda's Journal](https://docs.google.com/document/d/1d0F_Sr5oOJlMEnkFgruAcjrxLBLO19QT5fNWwc1e6u4/edit?usp=sharing)
+<br />
+![Screen Shot 2021-11-12 at 11 32 37 AM](https://user-images.githubusercontent.com/54915685/141524697-132166bb-30a2-456f-ad0d-f447a4f18c07.png)
+<br />
+![Screen Shot 2021-11-12 at 11 32 50 AM](https://user-images.githubusercontent.com/54915685/141524705-e4665713-8e26-4910-9995-8e63f23961f9.png)
+<br />
+![Screen Shot 2021-11-12 at 11 34 33 AM](https://user-images.githubusercontent.com/54915685/141524709-ecd5da1f-ce49-42b9-82d2-14dbc92627c6.png)
+
 
 ### Individual Final Video
 
