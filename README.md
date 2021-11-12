@@ -30,13 +30,13 @@ Either clone our repository or download a zip folder of it.
 
 ## Grading
 
+## N@TM Reflections
+
 [Alice and Ellen's Journal](https://docs.google.com/document/d/1IMomoeHpL4793btw-B4mt3yB9S1Kny-oxPzsLeIh2i8/edit?usp=sharing)
 <br />
 [Anthony and Sanvi's Journal](https://docs.google.com/document/d/1UPQxYudsGg_CQ7wcLBHzOEVOC-G-4lH2g79Qe2gOj3A/edit?usp=sharing)
 <br />
 [Linda's Journal](https://docs.google.com/document/d/1d0F_Sr5oOJlMEnkFgruAcjrxLBLO19QT5fNWwc1e6u4/edit?usp=sharing)
-
-## N@TM Reflections
 
 ### Individual Final Video
 
